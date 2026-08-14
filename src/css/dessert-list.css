@@ -1,0 +1,199 @@
+.dessert-list {
+  text-align: center;
+}
+
+.dessert-list__header {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.dessert-list__title {
+  margin-bottom: 24px;
+  font-family: var(--font-family-secondary);
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+
+.dessert-list__subtitle {
+  max-width: 335px;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.dessert-list__dropdown {
+  position: relative;
+  width: 100%;
+}
+
+.dessert-list__dropdown-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 48px;
+  padding: 11px 16px;
+  border: 1px solid var(--select-border-color);
+  border-radius: var(--input-border-radius);
+  background-color: transparent;
+  text-align: left;
+  transition:
+    border-color 250ms ease,
+    background-color 250ms ease;
+}
+
+.dessert-list__dropdown-button::after {
+  width: 8px;
+  height: 8px;
+  border-right: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor;
+  content: '';
+  transform: rotate(45deg) translateY(-2px);
+  transition: transform 250ms ease;
+}
+
+.dessert-list__dropdown-button[aria-expanded='true']::after {
+  transform: rotate(225deg) translate(-2px, -2px);
+}
+
+.dessert-list__dropdown-button:hover {
+  border-color: var(--input-border-hover);
+}
+
+.dessert-list__dropdown-button:focus-visible {
+  border-color: var(--input-border-focus);
+  outline: 2px solid var(--input-border-focus);
+  outline-offset: 2px;
+}
+
+.dessert-list__dropdown-menu {
+  position: absolute;
+  z-index: 10;
+  top: calc(100% + 4px);
+  left: 0;
+  width: 100%;
+  max-height: 240px;
+  padding: 8px;
+  overflow-y: auto;
+  border: 1px solid var(--select-border-color);
+  border-radius: var(--input-border-radius);
+  background-color: var(--select-dropdown-bg);
+  text-align: left;
+}
+
+.dessert-list__dropdown-menu[hidden],
+.dessert-list__load-more[hidden] {
+  display: none;
+}
+
+.dessert-list__categories {
+  display: none;
+}
+
+.dessert-list__load-more {
+  min-width: 164px;
+  min-height: 48px;
+  padding: 12px 24px;
+  border: 1px solid var(--btn-primary-border-color);
+  border-radius: 100px;
+  background-color: var(--btn-primary-bg-normal);
+  transition: background-color 250ms ease;
+}
+
+.dessert-list__load-more:hover,
+.dessert-list__load-more:focus-visible {
+  background-color: var(--btn-primary-bg-hover);
+}
+
+.dessert-list__load-more:focus-visible {
+  outline: 2px solid var(--btn-primary-bg-active);
+  outline-offset: 2px;
+}
+
+.dessert-list__load-more:active {
+  background-color: var(--btn-primary-bg-active);
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1439px) {
+  .dessert-list {
+    text-align: left;
+  }
+
+  .dessert-list__title {
+    margin-bottom: 8px;
+  }
+
+  .dessert-list__header {
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 32px;
+  }
+
+  .dessert-list__intro {
+    width: 336px;
+  }
+
+  .dessert-list__dropdown {
+    width: 256px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .dessert-list {
+    padding-top: 80px;
+  }
+
+  .dessert-list__header {
+    align-items: center;
+  }
+
+  .dessert-list__subtitle {
+    max-width: none;
+  }
+
+  .dessert-list__filters {
+    width: 100%;
+  }
+
+  .dessert-list__dropdown {
+    display: none;
+  }
+
+  .dessert-list__categories {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 32px;
+    row-gap: 24px;
+  }
+
+  .dessert-list__category-button {
+    min-height: 44px;
+    padding: 9px 24px;
+    border: 1px solid var(--btn-secondary-border-color);
+    border-radius: 100px;
+    background-color: var(--btn-secondary-bg-normal);
+    transition:
+      background-color 250ms ease,
+      border-color 250ms ease;
+  }
+
+  .dessert-list__category-button:hover,
+  .dessert-list__category-button:focus-visible,
+  .dessert-list__category-button[aria-pressed='true'] {
+    background-color: var(--btn-secondary-bg-hover);
+  }
+
+  .dessert-list__category-button:focus-visible {
+    outline: 2px solid var(--btn-secondary-bg-active);
+    outline-offset: 2px;
+  }
+
+  .dessert-list__category-button:active {
+    background-color: var(--btn-secondary-bg-active);
+  }
+}
