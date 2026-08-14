@@ -1,0 +1,43 @@
+<section class="dessert-list section" id="desserts" aria-labelledby="dessert-list-title">
+  <div class="container">
+    <div class="dessert-list__header">
+      <div class="dessert-list__intro">
+        <h2 class="dessert-list__title" id="dessert-list-title">Солодощі</h2>
+        <p class="dessert-list__subtitle">
+          Спробуйте наші смачні десерти, які вас здивують!
+        </p>
+      </div>
+
+      <div class="dessert-list__filters">
+        <div class="dessert-list__dropdown">
+          <button
+            class="dessert-list__dropdown-button"
+            type="button"
+            aria-expanded="false"
+            aria-controls="dessert-list-dropdown"
+          >
+            <span class="dessert-list__selected-category">Всі десерти</span>
+          </button>
+
+          <ul
+            class="dessert-list__dropdown-menu"
+            id="dessert-list-dropdown"
+            aria-label="Категорії десертів"
+            hidden
+          ></ul>
+        </div>
+
+        <ul
+          class="dessert-list__categories"
+          aria-label="Категорії десертів"
+        ></ul>
+      </div>
+    </div>
+
+    <ul class="dessert-list__cards" aria-live="polite"></ul>
+
+    <button class="dessert-list__load-more" type="button" hidden>
+      Завантажити ще
+    </button>
+  </div>
+</section>
