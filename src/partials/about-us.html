@@ -7,51 +7,81 @@
       десерти, які поєднують у собі вишуканий смак, свіжі інгредієнти та
       естетичний вигляд.
     </p>
-    <ul class="about-us_list">
-      <li class="about-us_item">
-        <img
-          class="about-us_image"
-          src="./img/about-us/1_img.webp"
-          srcset="
-            ./img/about-us/1_img.webp     1x,
-            ./img/about-us/1_img.@2x.webp 2x
-          "
-          alt="Кондитер начиняє профітролі"
-        />
-      </li>
-      <li class="about-us_item">
-        <img
-          class="about-us_image"
-          src="./img/about-us/2_img.webp"
-          srcset="
-            ./img/about-us/2_img.webp     1x,
-            ./img/about-us/2_img.@2x.webp 2x
-          "
-          alt="Команда кондитерів за рецептом"
-        />
-      </li>
-      <li class="about-us_item">
-        <img
-          class="about-us_image"
-          src="./img/about-us/3_img.webp"
-          srcset="
-            ./img/about-us/3_img.webp     1x,
-            ./img/about-us/3_img.@2x.webp 2x
-          "
-          alt="Вітрина кондитерської"
-        />
-      </li>
-      <li class="about-us_item">
-        <img
-          class="about-us_image"
-          src="./img/about-us/4_img.webp"
-          srcset="
-            ./img/about-us/4_img.webp     1x,
-            ./img/about-us/4_img.@2x.webp 2x
-          "
-          alt="Відвідувач зі шматком торта"
-        />
-      </li>
-    </ul>
+
+    <div class="about-us_swiper">
+      <ul class="about-us_list">
+        <li class="about-us_item">
+          <img
+            class="about-us_image"
+            src="./img/about-us/desktop/1_img.webp"
+            srcset="
+              ./img/about-us/desktop/1_img.webp     1x,
+              ./img/about-us/desktop/1_img.@2x.webp 2x
+            "
+            alt="Кондитер начиняє профітролі"
+            width="644"
+            height="478"
+          />
+        </li>
+        <li class="about-us_item">
+          <img
+            class="about-us_image"
+            src="./img/about-us/desktop/2_img.webp"
+            srcset="
+              ./img/about-us/desktop/2_img.webp     1x,
+              ./img/about-us/desktop/2_img.@2x.webp 2x
+            "
+            alt="Команда кондитерів за рецептом"
+            width="644"
+            height="478"
+          />
+        </li>
+        <li class="about-us_item">
+          <img
+            class="about-us_image"
+            src="./img/about-us/desktop/3_img.webp"
+            srcset="
+              ./img/about-us/desktop/3_img.webp     1x,
+              ./img/about-us/desktop/3_img.@2x.webp 2x
+            "
+            alt="Вітрина кондитерської"
+            width="644"
+            height="478"
+          />
+        </li>
+        <li class="about-us_item">
+          <img
+            class="about-us_image"
+            src="./img/about-us/desktop/4_img.webp"
+            srcset="
+              ./img/about-us/desktop/4_img.webp     1x,
+              ./img/about-us/desktop/4_img.@2x.webp 2x
+            "
+            alt="Відвідувач зі шматком торта"
+            width="644"
+            height="478"
+          />
+        </li>
+      </ul>
+      <button
+        class="about-us_btn about-us_btn-prev"
+        type="button"
+        aria-label="Попередній слайд"
+      >
+        <svg class="about-us_icon" width="24" height="24" aria-hidden="true">
+          <use href="./img/sprite.svg#icon-arrow-left"></use>
+        </svg>
+      </button>
+      <button
+        class="about-us_btn about-us_btn-next"
+        type="button"
+        aria-label="Наступний слайд"
+      >
+        <svg class="about-us_icon" width="24" height="24" aria-hidden="true">
+          <use href="./img/sprite.svg#icon-arrow-right"></use>
+        </svg>
+      </button>
+      <div class="about-us_pagination"></div>
+    </div>
   </div>
 </section>
