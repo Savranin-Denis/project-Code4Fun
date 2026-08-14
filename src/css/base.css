@@ -12,12 +12,13 @@
   --color-main: #080c0c;
   --color-bg: #f5fdfd;
   --color-error: #d50000;
+  --pixel-overlay: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
 
   /* Buttons */
   /* Primary Button */
   --btn-primary-bg-normal: #f19898;
-  --btn-primary-bg-hover: transparent;
-  --btn-primary-bg-active: #f5b6b6;
+  --btn-primary-bg-hover: #f5b6b6;
+  --btn-primary-bg-active: #c07979;
   --btn-primary-border-color: #080c0c;
   --btn-primary-text-color: #080c0c;
 
@@ -65,6 +66,9 @@
   --slider-arrow-border-normal: #080c0c;
   --slider-arrow-icon-color: #080c0c;
 
+  /* Transition */
+  --transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
   /* System settings */
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -83,4 +87,8 @@ body {
   line-height: var(--line-height-base);
   color: var(--color-main);
   background-color: var(--color-bg);
+}
+
+main {
+  flex-grow: 1;
 }
