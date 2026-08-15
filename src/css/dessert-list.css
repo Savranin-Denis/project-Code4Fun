@@ -84,6 +84,30 @@
   text-align: left;
 }
 
+.dessert-list__dropdown-menu > li + li {
+  margin-top: 4px;
+}
+
+.dessert-list__dropdown-option {
+  width: 100%;
+  padding: 8px 12px;
+  border-radius: 8px;
+  background-color: transparent;
+  text-align: left;
+  transition: background-color 250ms ease;
+}
+
+.dessert-list__dropdown-option:hover,
+.dessert-list__dropdown-option:focus-visible,
+.dessert-list__dropdown-option[aria-pressed='true'] {
+  background-color: var(--btn-secondary-bg-hover);
+}
+
+.dessert-list__dropdown-option:focus-visible {
+  outline: 2px solid var(--input-border-focus);
+  outline-offset: -2px;
+}
+
 .dessert-list__dropdown-menu[hidden],
 .dessert-list__load-more[hidden] {
   display: none;
@@ -93,13 +117,146 @@
   display: none;
 }
 
+.dessert-list__loader {
+  display: flex;
+  justify-content: center;
+  padding-block: 48px;
+}
+
+.dessert-list__loader[hidden] {
+  display: none;
+}
+
+.dessert-list__spinner {
+  width: 48px;
+  height: 48px;
+  border: 4px solid var(--btn-primary-bg-active);
+  border-top-color: var(--color-main);
+  border-radius: 50%;
+  animation: dessert-list-spin 800ms linear infinite;
+}
+
+.dessert-list__loader-text {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@keyframes dessert-list-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.dessert-list__cards {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 24px;
+  text-align: left;
+}
+
+.dessert-list__card-item {
+  min-width: 0;
+}
+
+.dessert-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 12px;
+  border: 1px solid var(--color-main);
+  border-radius: 16px;
+}
+
+.dessert-card__image {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  margin-bottom: 16px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.dessert-card__category {
+  margin-bottom: 4px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.dessert-card__title {
+  margin-bottom: 8px;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.dessert-card__description {
+  margin-bottom: 24px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.dessert-card__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: auto;
+}
+
+.dessert-card__price {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.dessert-card__details-button {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border: 1px solid var(--slider-arrow-border-normal);
+  border-radius: 50%;
+  background-color: var(--slider-arrow-bg-normal);
+  transition: background-color 250ms ease;
+}
+
+.dessert-card__details-button:hover,
+.dessert-card__details-button:focus-visible {
+  background-color: var(--slider-arrow-bg-hover);
+}
+
+.dessert-card__details-button:focus-visible {
+  outline: 2px solid var(--slider-arrow-border-normal);
+  outline-offset: 2px;
+}
+
+.dessert-card__details-button:active {
+  background-color: var(--slider-arrow-bg-active);
+}
+
+.dessert-card__details-icon {
+  width: 24px;
+  height: 24px;
+}
+
 .dessert-list__load-more {
-  min-width: 164px;
-  min-height: 48px;
-  padding: 12px 24px;
+  display: block;
+  width: 100%;
+  min-height: 44px;
+  margin: 40px auto 0;
+  padding: 10px 24px;
   border: 1px solid var(--btn-primary-border-color);
   border-radius: 100px;
   background-color: var(--btn-primary-bg-normal);
+  font-size: 16px;
+  line-height: 1.375;
   transition: background-color 250ms ease;
 }
 
@@ -115,6 +272,13 @@
 
 .dessert-list__load-more:active {
   background-color: var(--btn-primary-bg-active);
+}
+
+.dessert-list__dropdown-button:disabled,
+.dessert-list__dropdown-option:disabled,
+.dessert-list__category-button:disabled,
+.dessert-list__load-more:disabled {
+  cursor: wait;
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1439px) {
@@ -139,6 +303,15 @@
 
   .dessert-list__dropdown {
     width: 256px;
+  }
+
+  .dessert-list__cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 32px;
+  }
+
+  .dessert-list__load-more {
+    width: 344px;
   }
 }
 
@@ -195,5 +368,20 @@
 
   .dessert-list__category-button:active {
     background-color: var(--btn-secondary-bg-active);
+  }
+
+  .dessert-list__cards {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    column-gap: 32px;
+  }
+
+  .dessert-list__load-more {
+    width: 198px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dessert-list__spinner {
+    animation-duration: 1600ms;
   }
 }
