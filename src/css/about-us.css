@@ -36,13 +36,19 @@
 }
 
 @media screen and (min-width: 768px) {
+  .swipe-wrapper {
+    overflow: hidden;
+  }
+
   .about-us_list {
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    gap: 0;
   }
 
   .about-us_item {
     width: calc((100% - 24px) / 2);
+    flex-shrink: 0;
   }
 
   .about-us_image {
@@ -65,6 +71,11 @@
     color: var(--slider-arrow-icon-color);
   }
 
+  .about-us_btn.swiper-button-disabled {
+    opacity: 0.3;
+    cursor: default;
+  }
+
   .about-us_btn-prev {
     left: -28px;
   }
@@ -73,8 +84,8 @@
     right: -28px;
   }
 
-  .about-us_btn:hover,
-  .about-us_btn:focus {
+  .about-us_btn:hover:not(.swiper-button-disabled),
+  .about-us_btn:focus:not(.swiper-button-disabled) {
     background-color: var(--slider-arrow-bg-hover);
   }
 
@@ -83,8 +94,61 @@
     outline-offset: -10px;
   }
 
-  .about-us_btn:active {
+  .about-us_btn:active:not(.swiper-button-disabled) {
     background-color: var(--slider-arrow-bg-active);
+  }
+
+  /*
+  .about-us_pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 9px;
+    height: 28px;
+    margin-top: 16px;
+  }
+
+  .about-us_pagination .swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
+    margin: 0;
+    border-radius: 100%;
+    background-color: var(--color-main);
+    opacity: 0.2;
+    cursor: pointer;
+  }
+
+  .about-us_pagination .swiper-pagination-bullet-active {
+    opacity: 1;
+  }
+  */
+
+  .about-us_pagination {
+    height: 28px;
+    margin-top: 16px;
+  }
+
+  .about-us_swiper .about-us_pagination.swiper-pagination-bullets-dynamic {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+    overflow: hidden;
+    font-size: 0;
+  }
+
+  .about-us_pagination .swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
+    border-radius: 100%;
+    background-color: var(--color-main);
+    opacity: 0.2;
+    cursor: pointer;
+  }
+
+  .about-us_pagination .swiper-pagination-bullet-active {
+    opacity: 1;
+    background-color: var(--color-main);
   }
 }
 

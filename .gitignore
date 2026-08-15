@@ -25,3 +25,6 @@ dist-ssr
 
 # Pull requests list
 pullrequests-list.txt
+
+# Local learning plan (not part of the project)
+code.md
