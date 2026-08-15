@@ -1,0 +1,196 @@
+/* =========================
+   FAQ
+========================= */
+
+.faq {
+  background-color: var(--color-bg);
+}
+
+.faq-title {
+  margin: 0 0 40px;
+
+  font-family: var(--font-family-secondary);
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  text-align: center;
+  color: var(--color-main);
+}
+
+/* =========================
+   ACCORDION
+========================= */
+
+.faq-accordion {
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Reset standard accordion-js styles */
+
+.faq .ac {
+  margin: 0;
+
+  border: none;
+  border-top: 2px solid var(--color-main);
+
+  background-color: transparent;
+}
+
+.faq .ac:last-child {
+  border-bottom: 2px solid var(--color-main);
+}
+
+.faq .ac .ac-header {
+  margin: 0;
+  padding: 0;
+}
+
+/* =========================
+   QUESTION / TRIGGER
+========================= */
+
+.faq .ac .ac-trigger {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+
+  width: 100%;
+  padding: 16px 0;
+
+  border: none;
+
+  font-family: var(--font-family-main);
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: left;
+  color: var(--color-main);
+
+  background-color: transparent;
+
+  cursor: pointer;
+}
+
+.faq .ac .ac-trigger::after {
+  display: none;
+  content: none;
+}
+
+.faq-question {
+  display: block;
+
+  min-width: 0;
+  flex: 1;
+}
+
+/* =========================
+   ICON
+========================= */
+
+.faq-icon {
+  display: block;
+
+  width: 32px;
+  height: 32px;
+
+  flex: 0 0 32px;
+
+  color: var(--color-main);
+
+  transition: transform var(--transition);
+}
+
+.faq .ac.is-active .faq-icon {
+  transform: rotate(180deg);
+}
+
+/* =========================
+   ANSWER
+========================= */
+
+.faq .ac .ac-panel {
+  overflow: hidden;
+}
+
+.faq .ac .ac-panel .ac-text {
+  margin: 0;
+  padding: 0 48px 20px 0;
+
+  font-family: var(--font-family-main);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--color-main);
+}
+
+/* =========================
+   INTERACTION
+========================= */
+
+.faq .ac .ac-trigger {
+  transition: opacity var(--transition);
+}
+
+.faq .ac .ac-trigger:hover {
+  opacity: 0.7;
+}
+
+.faq .ac .ac-trigger:focus-visible {
+  outline: 2px solid var(--btn-primary-bg-normal);
+  outline-offset: 4px;
+}
+
+/* =========================
+   TABLET — 768px+
+========================= */
+
+@media screen and (min-width: 768px) {
+  .faq-title {
+    margin-bottom: 64px;
+  }
+
+  .faq .ac .ac-trigger {
+    padding: 18px 0;
+
+    font-size: 18px;
+  }
+
+  .faq .ac .ac-panel .ac-text {
+    padding: 0 48px 20px 0;
+
+    font-size: 18px;
+  }
+}
+
+/* =========================
+   DESKTOP — 1440px+
+========================= */
+
+@media screen and (min-width: 1440px) {
+  .faq-title {
+    margin-bottom: 80px;
+
+    font-size: 48px;
+  }
+
+  .faq-accordion {
+    max-width: 865px;
+  }
+
+  .faq .ac .ac-trigger {
+    padding: 20px 0;
+
+    font-size: 18px;
+  }
+
+  .faq .ac .ac-panel .ac-text {
+    padding: 0 48px 20px 0;
+
+    font-size: 18px;
+  }
+}

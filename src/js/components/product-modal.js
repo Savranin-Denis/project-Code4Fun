@@ -5,8 +5,8 @@ import Swal from 'sweetalert2';
 const closeBtn = document.querySelector('.product-modal-close');
 const productModalOverlay = document.querySelector('.product-modal-overlay');
 
-closeBtn.addEventListener('click', e => {
-  productModalOverlay.classList.add('is-closed');
+closeBtn.addEventListener("click", (e) => {
+    productModalOverlay.classList.remove("is-open");
 });
 
 export async function openDessertModal(id) {
