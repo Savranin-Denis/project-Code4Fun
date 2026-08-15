@@ -7,7 +7,7 @@ const compositionM = document.querySelector(".product-modal-info-list-element-co
 const imageM = document.querySelector(".product-modal-img")
 
 export function renderProductModal({name, description, composition, price, image}) {
-    title.textContent = name;
+    titleM.textContent = name;
     priceM.textContent = `${price} грн`;
     descriptionM.textContent = description
     compositionM.textContent = composition;
