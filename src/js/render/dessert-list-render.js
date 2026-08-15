@@ -1,3 +1,5 @@
+import spriteUrl from '../../img/sprite.svg';
+
 const allDessertsCategory = {
   _id: 'all',
   name: 'Всі десерти',
@@ -86,7 +88,7 @@ function createDessertCard(dessert) {
   icon.setAttribute('width', '24');
   icon.setAttribute('height', '24');
   icon.setAttribute('aria-hidden', 'true');
-  iconUse.setAttribute('href', './img/sprite.svg#icon-arrow-upright');
+  iconUse.setAttribute('href', `${spriteUrl}#icon-arrow-upright`);
 
   icon.append(iconUse);
   detailsButton.append(icon);
