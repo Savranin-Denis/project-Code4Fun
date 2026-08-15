@@ -1,0 +1,297 @@
+/* =========================
+FEEDBACK
+========================= */
+
+.feedback-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.feedback-title {
+    margin-bottom: 24px;
+
+    font-family: var(--font-family-secondary);
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 1.2;
+    text-align: center;
+}
+
+
+/* =========================
+SLIDER WRAPPER
+========================= */
+
+.feedback-slider-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+/* =========================
+SLIDER
+========================= */
+
+.feedback-slider {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+
+.feedback-slide {
+    display: flex;
+    box-sizing: border-box;
+    height: auto;
+}
+
+/* =========================
+CARD
+========================= */
+
+.feedback-card {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    height: 235px;
+    padding: 32px;
+
+    border: 2px solid var(--color-main);
+    border-radius: 16px;
+
+    background-color: transparent;
+}
+
+/* =========================
+RATING
+========================= */
+
+.feedback-rating {
+    display: flex;
+    width: fit-content;
+}
+
+.star-container {
+    display: flex;
+    gap: 4px;
+}
+
+.feedback-rating .star {
+    width: 20px;
+    height: 20px;
+}
+
+.feedback-rating.star-svg .star svg {
+    color: var(--color-main) !important;
+    fill: var(--color-main) !important;
+}
+
+.feedback-rating.star-svg .star-empty,
+.feedback-rating.star-svg .star-half,
+.feedback-rating.star-svg .star-filled {
+    color: var(--color-main) !important;
+    fill: var(--color-main) !important;
+}
+
+
+
+
+/* =========================
+CONTROLS
+========================= */
+
+.feedback-controls {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    width: 100%;
+    margin-top: 24px;
+    padding: 0;
+
+    pointer-events: auto;
+    z-index: 10;
+}
+
+.feedback-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    width: 48px;
+    height: 48px;
+
+    border: 2px solid var(--slider-arrow-border-normal);
+    border-radius: 50%;
+
+    background-color: var(--slider-arrow-bg-normal);
+
+    transition: var(--transition);
+
+    pointer-events: auto;
+    z-index: 21;
+}
+
+.feedback-button-prev {
+    margin-right: 16px;
+}
+
+.feedback-button:hover,
+.feedback-button:focus-visible {
+    background-color: var(--slider-arrow-bg-hover);
+}
+
+.feedback-button:active {
+    background-color: var(--slider-arrow-bg-active);
+}
+
+.feedback-button:disabled,
+.feedback-button.swiper-button-disabled {
+    cursor: not-allowed;
+    color: #a1a1a1;
+    pointer-events: none;
+    border-color: #a1a1a1;
+}
+
+/* =========================
+PAGINATION
+========================= */
+
+.feedback-pagination {
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    position: absolute !important;
+
+    margin: 0 !important;
+    padding: 0;
+    height: 30px;
+}
+
+.feedback-pagination .swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
+
+    margin: 0 4px !important;
+
+    border-radius: 50%;
+
+    background-color: var(--color-main);
+    opacity: 0.2;
+
+    cursor: pointer;
+
+    transition: var(--transition);
+}
+
+.feedback-pagination .swiper-pagination-bullet:hover {
+    opacity: 0.5;
+}
+
+.feedback-pagination .swiper-pagination-bullet-active {
+    opacity: 1;
+}
+
+/* =========================
+TABLET
+========================= */
+
+@media screen and (min-width: 768px) {
+
+    /* =========================
+    SLIDER WRAPPER
+    ========================= */
+
+    .feedback-slider-wrapper {
+        overflow: visible;
+    }
+
+    /* =========================
+     SLIDER
+    ========================= */
+
+    .feedback-slider {
+        position: relative;
+
+        width: 100%;
+
+        overflow: hidden;
+    }
+
+    /* =========================
+     CARD
+    ========================= */
+
+    .feedback-card {
+        height: 233px;
+        padding: 16px;
+    }
+
+    /* =========================
+     CONTROLS
+     ========================= */
+
+    .feedback-controls {
+        position: absolute;
+
+        top: 45%;
+
+        left: -30px;
+        right: -30px;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        width: auto;
+        margin: 0;
+
+        transform: translateY(-50%);
+
+        pointer-events: none;
+        z-index: 10;
+    }
+
+    .feedback-button {
+        pointer-events: auto;
+    }
+
+    /* =========================
+     PAGINATION
+     ========================= */
+
+    .feedback-pagination {
+        position: static !important;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: auto;
+
+        margin-top: 48px !important;
+    }
+}
+
+/* =========================
+DESKTOP
+========================= */
+
+@media screen and (min-width: 1440px) {
+    .feedback-title {
+        font-size: 48px;
+    }
+
+    .feedback-subtitle {
+        margin-bottom: 80px;
+    }
+
+    .feedback-card {
+        min-height: 233px;
+        padding: 32px;
+    }
+}
