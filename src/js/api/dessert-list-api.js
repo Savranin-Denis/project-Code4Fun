@@ -9,3 +9,15 @@ export async function getDessertCategories() {
 
   return data;
 }
+
+export async function getDesserts({ page = 1, limit = 8, category } = {}) {
+  const params = { page, limit };
+
+  if (category && category !== 'all') {
+    params.category = category;
+  }
+
+  const { data } = await dessertsApi.get('/desserts', { params });
+
+  return data;
+}
