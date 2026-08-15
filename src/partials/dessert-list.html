@@ -1,4 +1,8 @@
-<section class="dessert-list section" id="desserts" aria-labelledby="dessert-list-title">
+<section
+  class="dessert-list section"
+  id="desserts"
+  aria-labelledby="dessert-list-title"
+>
   <div class="container">
     <div class="dessert-list__header">
       <div class="dessert-list__intro">
@@ -35,6 +39,11 @@
     </div>
 
     <ul class="dessert-list__cards" aria-live="polite"></ul>
+
+    <div class="dessert-list__loader" role="status" hidden>
+      <span class="dessert-list__spinner" aria-hidden="true"></span>
+      <span class="dessert-list__loader-text">Завантаження десертів</span>
+    </div>
 
     <button class="dessert-list__load-more" type="button" hidden>
       Завантажити ще
