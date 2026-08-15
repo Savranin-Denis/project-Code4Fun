@@ -1,0 +1,45 @@
+<section class="popular-products section" id="popular-products">
+  <div class="container popular-products__container">
+    <h2 class="popular-products__title">Наші бестселлери</h2>
+
+    <div class="popular-products__status" data-popular-products-status>
+      Завантаження...
+    </div>
+
+    <div class="popular-products__slider" data-popular-products-slider hidden>
+      <div class="popular-products__viewport">
+        <ul class="popular-products__list" data-popular-products-list></ul>
+      </div>
+
+      <div class="popular-products__controls">
+        <div
+          class="popular-products__pagination"
+          data-popular-products-pagination
+        ></div>
+
+        <div class="popular-products__buttons">
+          <button
+            class="popular-products__arrow"
+            type="button"
+            data-popular-products-prev
+            aria-label="Previous products"
+          >
+            <svg class="popular-products__arrow-icon" width="24" height="24">
+              <use href="../img/sprite.svg#icon-arrow-left"></use>
+            </svg>
+          </button>
+          <button
+            class="popular-products__arrow"
+            type="button"
+            data-popular-products-next
+            aria-label="Next products"
+          >
+            <svg class="popular-products__arrow-icon" width="24" height="24">
+              <use href="../img/sprite.svg#icon-arrow-right"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
