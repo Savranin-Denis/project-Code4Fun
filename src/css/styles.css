@@ -11,6 +11,7 @@
 
 /* Sections style */
 @import url('./header.css');
+@import url('./mobile.menu.css');
 @import url('./hero.css');
 @import url('./popular-products.css');
 @import url('./dessert-list.css');
