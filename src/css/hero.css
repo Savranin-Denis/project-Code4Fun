@@ -1,5 +1,18 @@
 .hero {
   background-color: #d9d9d9;
+  background-image:
+    var(--pixel-overlay), url('../img/hero/mobile/hero-bg-mob.webp');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding-block: 156px;
+}
+
+@media (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .hero {
+    background-image:
+      var(--pixel-overlay), url('../img/hero/mobile/hero-bg-mob2x.webp');
+  }
 }
 
 .hero-container {
@@ -9,7 +22,7 @@
 }
 
 .hero-title {
-  font-family: 'Comfortaa', sans-serif;
+  font-family: var(--font-family-secondary);
   font-weight: 700;
   font-size: 40px;
   line-height: 1.2;
@@ -27,28 +40,69 @@
 }
 
 .hero-btn {
-  border: 1px solid #f19898;
+  border: 1px solid var(--btn-primary-bg-normal);
   border-radius: 100px;
   padding: 10px 24px;
   max-width: 335px;
+  width: 100%;
   min-height: 44px;
-  padding: 10px 82px;
-  font-family: 'Work Sans', sans-serif;
   font-weight: 500;
   font-size: 16px;
-  line-height: 1.5;
-  color: #080c0c;
-  background: #f19898;
+  color: var(--btn-primary-text-color);
+  background-color: var(--btn-primary-bg-normal);
   text-align: center;
+  transition:
+    background-color var(--transition),
+    border-color var(--transition);
+}
+
+.hero-btn:hover {
+  background-color: var(--btn-primary-bg-hover);
+  border-color: var(--btn-primary-bg-hover);
+}
+
+.hero-btn:active {
+  background-color: var(--btn-primary-bg-active);
+  border-color: var(--btn-primary-bg-active);
+}
+
+.hero-btn:focus-visible {
+  background-color: var(--btn-primary-bg-hover);
+  border-color: var(--btn-primary-bg-hover);
 }
 
 @media (min-width: 768px) {
+  .hero {
+    background-image:
+      var(--pixel-overlay), url('../img/hero/tablet/hero-bg-tab.webp');
+    padding-block: 325px;
+  }
+
+  @media (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    .hero {
+      background-image:
+        var(--pixel-overlay), url('../img/hero/tablet/hero-bg-tab_2x.webp');
+    }
+  }
+
   .hero-btn {
-    padding: 10px 24px;
+    max-width: 219px;
   }
 }
 
 @media (min-width: 1440px) {
+  .hero {
+    background-image:
+      var(--pixel-overlay), url('../img/hero/desktop/hero-bg-pc.webp');
+  }
+
+  @media (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    .hero {
+      background-image:
+        var(--pixel-overlay), url('../img/hero/desktop/hero-bg-pc_2x.webp');
+    }
+  }
+
   .hero-title {
     max-width: 766px;
   }
