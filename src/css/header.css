@@ -10,11 +10,68 @@
     display: flex;
     gap: 16px;
 }
+
+.nav-link,
+.mob-link {
+    font-family: var(--font-family-main);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: var(--link-color-normal);
+    text-decoration: none;
+    cursor: pointer;
+    transition: 
+        color var(--transition),
+        text-decoration-color var(--transition);
+}
+
+.nav-link:hover,
+.nav-link:focus,
+.mob-link:hover,
+.mob-link:focus {
+    text-decoration: none;
+    border-bottom: 1px solid var(--link-color-hover);
+}
+
+.nav-link:active,
+.mob-link:active {
+    text-decoration: underline;
+    color: var(--link-color-active);
+}
+
 .header-btn{
     display: none;
 }
 
-.headericons-menu {
+.header-btn,
+.header-btn-mob {
+    background-color: var(--btn-primary-bg-normal);
+    border: 1px solid var(--btn-primary-bg-normal);
+    color: var(--btn-primary-text-color);
+    border-radius: 100px;
+    font-family: var(--font-family-main);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    cursor: pointer;
+    transition: 
+        background-color var(--transition),
+        border-color var(--transition);
+}
+
+.header-btn:hover,
+.header-btn:focus,
+.header-btn-mob:hover,
+.header-btn-mob:focus {
+    background-color: var(--btn-primary-bg-hover);
+    border-color: var(--btn-primary-border-color);
+}
+.header-btn:active,
+.header-btn-mob:active {
+    background-color: var(--btn-primary-bg-active);
+    border-color: var(--btn-primary-border-color);
+}
+.mob-menu-open{
   width: 48px;
   height: 48px;
   padding: 12px;
@@ -25,33 +82,28 @@
   justify-content: center;
 }
 
-.headericons-menu-svg {
+.mob-menu-svg {
   width: 24px;
   height: 24px;
   fill: #000;
-
 }
 
 /* Tablet*/
 @media screen and (min-width: 768px){
+    .mob-menu-open{
+        display: none;
+    }
 .header-btn{
     display: inline-flex;
     margin-left: 32px;
     white-space: nowrap;
-    background-color: var(--btn-primary-bg-normal);
-    border: 1px solid var(--btn-primary-border-color);
-    color: var(--btn-primary-text-color);
-
     padding: 8px 20px;
-    border-radius: 100px;
-
-
-
 }
 .nav{
-    display: block;
+    display: flex;
     margin-left: 38px;
     white-space: nowrap;
+    align-items: center;
 }
 .header{
         padding: 16px 0;
