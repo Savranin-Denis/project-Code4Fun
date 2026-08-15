@@ -1,0 +1,51 @@
+<link rel="stylesheet" href="../css/styles.css">
+<link rel="stylesheet" href="../css/product-modal.css">
+
+<div class="modal-backdrop js-modal">
+    <div class="order-modal-container">
+
+        <button class="modal-close-btn js-close-modal" type="button" aria-label="Закрити модальне вікно">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://w3.org">
+                <path d="M18 6L6 18M6 6L18 18" stroke="#2C2C2C" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+            </svg>
+        </button>
+
+        <div class="modal-step-product js-step-1">
+            <div class="product-modal-content">
+                <div class="product-modal-image">
+                    <img class="js-modal-img" src="../img/fondan.jpg" alt="Шоколадний фондан">
+                </div>
+                <div class="product-modal-info">
+                    <h2 class="product-title js-modal-title">Шоколадний фондан</h2>
+                    <p class="product-price js-modal-price">120 грн</p>
+                    <div class="product-rating">★★★★★</div>
+                    <p class="product-text js-modal-text">Класичний десерт з рідким шоколадним центром.</p>
+                    <p class="product-composition"><strong>Склад:</strong> <span class="js-modal-ingredients">Шоколад,
+                            яйця, цукор, масло, борошно.</span></p>
+                    <button class="modal-next-btn js-next-step-btn" type="button">Перейти до замовлення</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal-step-form js-step-2" style="display: none;">
+            <h2 class="form-title">Оформлення замовлення</h2>
+            <form class="order-form">
+                <div class="form-group">
+                    <label for="userName">Ім'я*</label>
+                    <input type="text" id="userName" name="name" placeholder="Вікторія" required>
+                </div>
+                <div class="form-group">
+                    <label for="userPhone">Телефон*</label>
+                    <input type="tel" id="userPhone" name="phone" placeholder="+380" required>
+                </div>
+                <div class="form-group">
+                    <label for="userComment">Коментар*</label>
+                    <textarea id="userComment" name="comment" placeholder="Ваш коментар" required></textarea>
+                </div>
+                <button class="form-submit-btn" type="submit">Надіслати замовлення</button>
+            </form>
+        </div>
+
+    </div>
+</div>
