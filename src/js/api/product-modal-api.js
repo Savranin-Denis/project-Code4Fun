@@ -5,7 +5,7 @@ const productCardApi = axios.create({
 })
 
 export async function getProduct (id) {
-    const response = await productCardApi.get(`/product/${id}`)
+    const response = await productCardApi.get(`/desserts/${id}`)
 
     return response.data
 }
