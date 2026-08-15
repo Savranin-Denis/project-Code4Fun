@@ -17,8 +17,6 @@ export function createPopularProductCard(product) {
           src="${product.image}"
           alt="${product.name}"
           loading="lazy"
-          width="278"
-          height="209"
         />
         <div class="popular-products-card__content">
           <div class="popular-products-card__text">
@@ -41,7 +39,7 @@ export function createPopularProductCard(product) {
               aria-label="Відкрити деталі товару ${product.name}"
             >
               <svg class="popular-products-card__icon" width="24" height="24">
-                <use href="../img/sprite.svg#icon-arrow-upright"></use>
+                <use href="./img/sprite.svg#icon-arrow-upright"></use>
               </svg>
             </button>
           </div>
