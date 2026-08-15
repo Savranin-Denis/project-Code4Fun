@@ -1,6 +1,7 @@
 import Swiper from 'swiper';
 import { Navigation, Pagination } from 'swiper/modules';
 import 'swiper/css';
+import 'swiper/css/pagination';
 
 import { getPopularProducts } from '../api/popular-products-api.js';
 import { renderPopularProducts } from '../render/popular-products-render.js';
@@ -69,8 +70,7 @@ function initSwiper() {
     pagination: {
       el: refs.pagination,
       clickable: true,
-      bulletClass: 'popular-products__dot',
-      bulletActiveClass: 'is-active',
+      dynamicBullets: true,
     },
   });
 }

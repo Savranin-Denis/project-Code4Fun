@@ -6,10 +6,8 @@
 }
 
 .popular-products__title {
-  max-width: 335px;
   font-family: var(--font-family-secondary);
   font-size: 36px;
-  font-weight: 700;
   line-height: 1.2;
   color: var(--color-main);
 }
@@ -33,8 +31,6 @@
 
 .popular-products__list {
   display: flex;
-  transition: transform 300ms ease;
-  will-change: transform;
 }
 
 .popular-products__item {
@@ -54,7 +50,6 @@
 
 .popular-products-card__image {
   width: 100%;
-  aspect-ratio: 278 / 209;
   border-radius: 8px;
   object-fit: cover;
 }
@@ -64,7 +59,6 @@
   flex: 1;
   flex-direction: column;
   justify-content: space-between;
-  min-height: 158px;
 }
 
 .popular-products-card__text {
@@ -93,7 +87,6 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 16px;
 }
 
 .popular-products-card__price {
@@ -109,13 +102,13 @@
   justify-content: center;
   width: 48px;
   height: 48px;
-  border: 2px solid var(--color-main);
+  border: 2px solid var(--slider-arrow-border-normal);
   border-radius: 50%;
   background-color: transparent;
   transition:
-    background-color 250ms ease,
-    border-color 250ms ease,
-    opacity 250ms ease;
+    background-color var(--transition),
+    border-color var(--transition),
+    opacity var(--transition);
 }
 
 .popular-products-card__button:hover,
@@ -136,31 +129,23 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 16px;
   margin-top: 24px;
 }
 
 .popular-products__pagination {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 8px;
+  --swiper-pagination-color: var(--color-main);
+  --swiper-pagination-bullet-inactive-color: rgba(8, 12, 12, 0.2);
+  --swiper-pagination-bullet-inactive-opacity: 1;
+  --swiper-pagination-bullet-size: 8px;
+  --swiper-pagination-bullet-horizontal-gap: 4px;
+  position: relative;
+  overflow: hidden;
+  text-align: left;
 }
 
-.popular-products__dot {
-  display: block;
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background-color: rgba(8, 12, 12, 0.2);
-  transition: background-color 250ms ease;
+.swiper-pagination-bullet {
   cursor: pointer;
-}
-
-.popular-products__dot:hover,
-.popular-products__dot:focus-visible,
-.popular-products__dot.is-active {
-  background-color: var(--color-main);
+  transition: background-color var(--transition);
 }
 
 .popular-products__buttons {
@@ -176,10 +161,4 @@
 
 .popular-products__sprite {
   display: none;
-}
-
-@media only screen and (min-width: 768px) {
-  .popular-products__title {
-    max-width: 768px;
-  }
 }
