@@ -1,4 +1,5 @@
 import './js/components/navbar.js';
+import './js/components/popular-products.js';
 import './js/components/dessert-list.js';
 import './js/components/about-us.js';
 import './js/components/feedback.js';
