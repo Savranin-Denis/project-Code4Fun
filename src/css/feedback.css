@@ -13,11 +13,16 @@ FEEDBACK
 
     font-family: var(--font-family-secondary);
     font-weight: 700;
-    font-size: 32px;
+    font-size: 36px;
+    letter-spacing: -0.01em;
     line-height: 1.2;
     text-align: center;
 }
 
+.feedback-subtitle {
+    text-align: center;
+    margin-bottom: 40px;
+}
 
 /* =========================
 SLIDER WRAPPER
@@ -61,6 +66,21 @@ CARD
     border-radius: 16px;
 
     background-color: transparent;
+}
+
+/* =========================
+TEXT
+========================= */
+
+.feedback-text {
+    margin-top: 24px;
+}
+
+.feedback-name {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-top: auto;
 }
 
 /* =========================
