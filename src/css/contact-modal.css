@@ -1,0 +1,115 @@
+.order-modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    padding: 16px;
+}
+
+.order-modal-box {
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 24px;
+    width: 100%;
+    max-width: 458px;
+    position: relative;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+}
+
+.order-modal-close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.order-modal-close svg path {
+    transition: stroke 0.2s ease;
+}
+
+.order-modal-close:hover svg path {
+    stroke: #e5989b;
+}
+
+.order-modal-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #2C2C2C;
+    text-align: center;
+    margin: 0 0 24px 0;
+}
+
+.order-modal-field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+}
+
+.order-modal-label {
+    font-size: 14px;
+    color: #7a7a7a;
+    margin-bottom: 8px;
+}
+
+.order-modal-input,
+.order-modal-textarea {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid #cccccc;
+    border-radius: 12px;
+    font-size: 16px;
+    outline: none;
+}
+
+.order-modal-input:focus,
+.order-modal-textarea:focus {
+    border-color: #e5989b;
+}
+
+.order-modal-textarea {
+    resize: vertical;
+    min-height: 90px;
+}
+
+.order-modal-submit {
+    display: block;
+    margin: 28px auto 0 auto;
+    background-color: #e5989b;
+    color: #ffffff;
+    border: none;
+    padding: 14px 32px;
+    border-radius: 24px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    width: 100%;
+}
+
+.order-modal-submit:hover {
+    background-color: #b5838d;
+}
+
+@media screen and (min-width: 768px) {
+    .order-modal-box {
+        padding: 40px;
+    }
+
+    .order-modal-submit {
+        width: auto;
+    }
+}
+
+@import url('./contact-modal.css');
