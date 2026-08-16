@@ -10,7 +10,7 @@
     justify-content: center;
     align-items: flex-start;
     overflow-y: auto;
-    padding-block: 16px;
+    padding-block: 64px;
 }
 
 .product-modal-overlay.is-closed{
@@ -103,6 +103,22 @@
 .product-modal-info-list-element-grade{
     display: flex;
     gap: 4px;
+}
+
+.product-modal-info-list-element-grade .rating {
+  font-size: 16px;
+}
+
+.product-modal-info-list-element-grade .star svg {
+    color: #000 !important;
+    fill: #000 !important;
+}
+
+.product-modal-info-list-element-grade .star-empty,
+.product-modal-info-list-element-grade .star-half,
+.product-modal-info-list-element-grade .star-filled {
+    color: #000 !important;
+    fill: #000 !important;
 }
 
 .product-modal-info-list-element-composition{
