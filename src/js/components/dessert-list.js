@@ -7,6 +7,7 @@ import {
   renderDessertCards,
   renderDessertCategories,
 } from '../render/dessert-list-render.js';
+import { openDessertModal } from './product-modal.js';
 
 const dessertSection = document.querySelector('.dessert-list');
 const filters = document.querySelector('.dessert-list__filters');
@@ -197,10 +198,27 @@ function handleEscape(event) {
   }
 }
 
+function handleDetailsClick(event) {
+  if (!(event.target instanceof Element)) {
+    return;
+  }
+
+  const detailsButton = event.target.closest(
+    '.dessert-card__details-button'
+  );
+
+  if (!detailsButton) {
+    return;
+  }
+
+  openDessertModal(detailsButton.dataset.dessertId);
+}
+
 desktopCategories?.addEventListener('click', handleCategoryClick);
 dropdownCategories?.addEventListener('click', handleCategoryClick);
 dropdownButton?.addEventListener('click', handleDropdownToggle);
 document.addEventListener('click', handleOutsideClick);
 document.addEventListener('keydown', handleEscape);
 loadMoreButton?.addEventListener('click', handleLoadMore);
+cardsList?.addEventListener('click', handleDetailsClick);
 initDessertList();

@@ -1,19 +1,17 @@
-<link rel="stylesheet" href="../css/styles.css">
-<link rel="stylesheet" href="../css/contact-modal.css">
-
-<div class="order-modal-backdrop">
-    <div class="order-modal-box">
-
+<div class="order-modal-backdrop is-hidden" aria-hidden="true">
+    <div class="order-modal-box" role="dialog" aria-modal="true" aria-labelledby="order-modal-title">
         <button class="order-modal-close" type="button" aria-label="Закрити модальне вікно">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://w3.org">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M18 6L6 18M6 6L18 18" stroke="#2C2C2C" stroke-width="2" stroke-linecap="round"
                     stroke-linejoin="round" />
             </svg>
         </button>
 
-        <h2 class="order-modal-title">Оформлення замовлення</h2>
+        <h2 class="order-modal-title" id="order-modal-title">Оформлення замовлення</h2>
 
         <form class="order-modal-form" action="#">
+            <input class="order-modal-dessert-id" type="hidden" name="dessertId">
+            <input class="order-modal-dessert-name" type="hidden" name="dessertName">
 
             <div class="order-modal-field">
                 <label class="order-modal-label" for="modal-user-name">Ім'я*</label>
@@ -33,7 +31,7 @@
                     required></textarea>
             </div>
 
-            <button class="order-modal-submit" type="submit">Надіслати замовлення</button>
+            <button class="order-modal-submit" type="submit">Надіслати заявку</button>
         </form>
     </div>
-    </div>
+</div>
