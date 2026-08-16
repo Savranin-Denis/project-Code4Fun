@@ -11,6 +11,7 @@
     z-index: 9999;
     padding: 20px;
     box-sizing: border-box;
+    overflow-y: auto;
 
     opacity: 1;
     visibility: visible;
