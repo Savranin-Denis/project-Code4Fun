@@ -8,13 +8,17 @@
     z-index: 999;
     display: flex;
     justify-content: center;
-    align-items: center;
-    
+    align-items: flex-start;
+    overflow-y: auto;
+    padding-block: 16px;
+}
+
+.product-modal-overlay.is-closed{
     opacity: 0;              
     pointer-events: none;
 }
 
-.is-open{
+.product-modal-overlay.is-open{
     opacity: 1;             
     pointer-events: auto;
 }
@@ -36,6 +40,12 @@
     top: 16px;
     right: 16px;
     background: none;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
 }
 
 .close-svg{
@@ -145,6 +155,10 @@
 }
  
 @media only screen and ( min-width:1440px){
+    .product-modal-overlay {
+        align-items: center;
+    }
+
     .product-modal {
         width:100%;
         max-width: 1312px;

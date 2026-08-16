@@ -10,6 +10,17 @@
     justify-content: center;
     z-index: 9999;
     padding: 16px;
+    overflow-y: auto;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 250ms ease, visibility 250ms ease;
+}
+
+.order-modal-backdrop.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
 }
 
 .order-modal-box {
@@ -111,5 +122,3 @@
         width: auto;
     }
 }
-
-@import url('./contact-modal.css');
