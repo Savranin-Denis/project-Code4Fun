@@ -137,4 +137,7 @@
   .order-modal-submit {
     width: 196px;
   }
+  .order-modal-title {
+    font-size: 46px;
+  }
 }
