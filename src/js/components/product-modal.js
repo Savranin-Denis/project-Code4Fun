@@ -63,6 +63,11 @@ function handleOrderButtonClick() {
   });
 }
 
+function handlePopularProductOpen(event) {
+  openDessertModal(event.detail.productId);
+}
+
 orderButton?.addEventListener('click', handleOrderButtonClick);
 productModalOverlay?.addEventListener('click', handleModalClick);
 document.addEventListener('keydown', handleEscape);
+document.addEventListener('popular-product:open', handlePopularProductOpen);
