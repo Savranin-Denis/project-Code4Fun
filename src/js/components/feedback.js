@@ -41,9 +41,10 @@ async function initFeedback() {
   },
 
   pagination: {
-  el: '.feedback-pagination',
-  clickable: true,
-        },
+    el: '.feedback-pagination',
+    clickable: true,
+    dynamicBullets: true,
+  },
   
 });
   } catch (error) {

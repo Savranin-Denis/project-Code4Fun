@@ -1,4 +1,4 @@
-import starSprite from 'css-star-rating/images/star-rating.icons.svg';
+const starSprite = `${import.meta.env.BASE_URL}img/star-rating.icons.svg`;
 
 export function createFeedbackMarkup(feedbacks) {
   return feedbacks

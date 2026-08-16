@@ -182,40 +182,27 @@ PAGINATION
 
 .feedback-pagination {
 
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-
-    position: absolute !important;
-
-    margin: 0 !important;
-    padding: 0;
-    height: 30px;
+    --swiper-pagination-color: var(--color-main);
+    --swiper-pagination-bullet-inactive-color: rgba(8, 12, 12, 0.2);
+    --swiper-pagination-bullet-inactive-opacity: 1;
+    --swiper-pagination-bullet-size: 8px;
+    --swiper-pagination-bullet-horizontal-gap: 4px;
+    position: relative;
+    overflow: hidden;
+    text-align: left;
+    bottom: var(--swiper-pagination-bottom, 15px) !important;
+    left: 0 !important;
+    right: auto !important;
+    margin-top: -48px !important;
+    transform: none !important;
 }
 
 .feedback-pagination .swiper-pagination-bullet {
-    width: 8px;
-    height: 8px;
-
-    margin: 0 4px !important;
-
-    border-radius: 50%;
-
-    background-color: var(--color-main);
-    opacity: 0.2;
-
     cursor: pointer;
-
-    transition: var(--transition);
+    transition: background-color var(--transition);
 }
 
-.feedback-pagination .swiper-pagination-bullet:hover {
-    opacity: 0.5;
-}
 
-.feedback-pagination .swiper-pagination-bullet-active {
-    opacity: 1;
-}
 
 /* =========================
 TABLET
@@ -287,13 +274,10 @@ TABLET
 
     .feedback-pagination {
         position: static !important;
-
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: auto;
-
         margin-top: 48px !important;
+        margin-left: auto;
+        margin-right: auto;
+        
     }
 }
 
