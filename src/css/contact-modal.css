@@ -48,15 +48,6 @@
   background: transparent;
 }
 
-.order-modal-close:focus-visible {
-  outline: 2px solid var(--btn-primary-bg-active);
-  border-radius: 4px;
-}
-
-.order-modal-close:hover svg path {
-  stroke: var(--btn-primary-bg-normal);
-}
-
 .order-modal-title {
   font-family: var(--font-family-secondary);
   margin-bottom: 48px;
@@ -99,8 +90,9 @@
   height: 180px;
 }
 
-.order-modal-input:user-invalid {
+.order-modal-input:not(:placeholder-shown):invalid {
   border-color: var(--input-border-error);
+  color: var(--input-text-error);
 }
 .order-modal-submit {
   display: block;
