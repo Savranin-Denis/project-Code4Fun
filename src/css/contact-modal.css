@@ -1,148 +1,148 @@
 .order-modal-backdrop {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(44, 44, 44, 0.4);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 9999;
-    padding: 20px;
-    box-sizing: border-box;
-    overflow-y: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  overflow-y: auto;
 
-    opacity: 1;
-    visibility: visible;
-    pointer-events: initial;
-    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
-        visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition:
+    opacity var(--transition),
+    visibility var(--transition);
 }
 
 .order-modal-backdrop.is-hidden {
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
 }
 
 .order-modal-box {
-    background-color: #ffffff;
-    border-radius: 20px;
-    padding: 24px;
-    width: 100%;
-    max-width: 311px;
-    position: relative;
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
-    box-sizing: border-box;
+  position: relative;
+  width: 100%;
+  max-width: 768px;
+  padding: 64px 20px;
+  border-radius: 16px;
+  background-color: var(--color-bg);
+  transition: transform var(--transition);
 }
 
 .order-modal-backdrop.is-hidden .order-modal-box {
-    transform: scale(0.9);
+  transform: scale(0.9);
 }
 
 .order-modal-close {
-    position: absolute;
-    top: 16px;
-    right: 16px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 4px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.order-modal-close svg path {
-    transition: stroke 250ms ease;
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  background: transparent;
 }
 
 .order-modal-close:focus-visible {
-    outline: 2px solid #b5838d;
-    border-radius: 4px;
+  outline: 2px solid var(--btn-primary-bg-active);
+  border-radius: 4px;
 }
 
 .order-modal-close:hover svg path {
-    stroke: #e5989b;
+  stroke: var(--btn-primary-bg-normal);
 }
 
 .order-modal-title {
-    font-size: 24px;
-    font-weight: 600;
-    color: #2C2C2C;
-    text-align: center;
-    margin: 0 0 24px 0;
+  font-family: var(--font-family-secondary);
+  margin-bottom: 48px;
+  font-size: 36px;
+  font-weight: 700;
+  text-align: center;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
 }
 
 .order-modal-field {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 24px;
 }
 
 .order-modal-label {
-    font-size: 14px;
-    color: #7a7a7a;
-    margin-bottom: 8px;
+  margin-bottom: 8px;
+  font-size: 16px;
 }
 
 .order-modal-input,
 .order-modal-textarea {
-    width: 100%;
-    padding: 14px 16px;
-    border: 1px solid #cccccc;
-    border-radius: 12px;
-    font-size: 16px;
-    outline: none;
-    box-sizing: border-box;
-    transition: border-color 250ms ease;
+  width: 100%;
+  padding: 8px 12px;
+  border: 2px solid var(--input-border-color);
+  border-radius: var(--input-border-radius);
+  font-size: 16px;
+  outline: none;
+  background-color: var(--input-bg-color);
+  transition: border-color var(--transition);
 }
 
-.order-modal-input:focus-visible,
-.order-modal-textarea:focus-visible {
-    border-color: #e5989b;
-    outline: 2px solid rgba(229, 152, 155, 0.3);
+.order-modal-input:focus,
+.order-modal-textarea:focus {
+  border-color: var(--input-border-focus);
 }
 
 .order-modal-textarea {
-    resize: vertical;
-    min-height: 90px;
+  height: 180px;
 }
 
+.order-modal-input:user-invalid {
+  border-color: var(--input-border-error);
+}
 .order-modal-submit {
-    display: block;
-    margin: 28px auto 0 auto;
-    background-color: #e5989b;
-    color: #ffffff;
-    border: none;
-
-    width: 196px;
-    height: 44px;
-    border-radius: 100px;
-
-    font-weight: bold;
-    font-size: 14px;
-    cursor: pointer;
-    transition: background-color 250ms ease, transform 100ms ease;
+  display: block;
+  width: 100%;
+  height: 44px;
+  margin-top: 24px;
+  padding: 10px 24px;
+  border-radius: 100px;
+  background-color: var(--btn-primary-bg-normal);
+  font-size: 16px;
+  transition:
+    background-color var(--transition),
+    transform 100ms ease;
 }
 
-.order-modal-submit:hover {
-    background-color: #b5838d;
-}
-
+.order-modal-submit:hover,
 .order-modal-submit:focus-visible {
-    outline: 3px solid #b5838d;
-    outline-offset: 2px;
+  border: 2px solid var(--input-border-color);
 }
 
 .order-modal-submit:active {
-    transform: scale(0.98);
+  background-color: var(--btn-primary-bg-active);
 }
 
 @media screen and (min-width: 768px) {
-    .order-modal-box {
-        padding: 40px;
-        max-width: 458px;
-    }
+  .order-modal-box {
+    padding-inline: 32px;
+  }
+  .order-modal-backdrop {
+    padding: 32px;
+  }
+  .order-modal-submit {
+    width: 344px;
+    margin: 24px auto 0;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .order-modal-box {
+    padding-inline: 64px;
+  }
+  .order-modal-submit {
+    width: 196px;
+  }
 }
