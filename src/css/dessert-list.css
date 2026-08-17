@@ -190,7 +190,8 @@
 .dessert-list__cards {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
-  gap: 24px;
+  row-gap: 32px;
+  column-gap: 24px;
   text-align: left;
 }
 
@@ -341,7 +342,6 @@
 
   .dessert-list__cards {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    column-gap: 32px;
   }
 
   .dessert-list__load-more {
@@ -406,7 +406,6 @@
 
   .dessert-list__cards {
     grid-template-columns: repeat(4, minmax(0, 1fr));
-    column-gap: 32px;
   }
 
   .dessert-list__load-more {
