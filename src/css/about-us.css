@@ -31,12 +31,12 @@
 }
 
 .about-us_btn,
-.about-us_pagination {
+.about-us_pagination-box {
   display: none;
 }
 
 @media screen and (min-width: 768px) {
-  .swipe-wrapper {
+  .about-us_swipe {
     overflow: hidden;
   }
 
@@ -55,20 +55,33 @@
     height: 252px;
   }
 
+  .about-us_gallery {
+    position: relative;
+    margin-bottom: 48px;
+  }
+
   .about-us_btn {
     position: absolute;
-    top: 95px;
+    top: 50%;
+    transform: translateY(-50%);
     z-index: 2;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 48px;
     height: 48px;
-    padding: 12px;
+    padding: 0;
     border: 2px solid var(--slider-arrow-border-normal);
     border-radius: 100px;
     background-color: var(--slider-arrow-bg-normal);
     color: var(--slider-arrow-icon-color);
+    outline: none;
+  }
+
+  .about-us_icon {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
   }
 
   .about-us_btn.swiper-button-disabled {
@@ -85,54 +98,32 @@
   }
 
   .about-us_btn:hover:not(.swiper-button-disabled),
-  .about-us_btn:focus:not(.swiper-button-disabled) {
+  .about-us_btn:focus-visible:not(.swiper-button-disabled) {
     background-color: var(--slider-arrow-bg-hover);
-  }
-
-  .about-us_btn:focus {
-    outline: 1px dotted var(--slider-arrow-border-normal);
-    outline-offset: -10px;
   }
 
   .about-us_btn:active:not(.swiper-button-disabled) {
     background-color: var(--slider-arrow-bg-active);
   }
 
-  /*
-  .about-us_pagination {
+  .about-us_pagination-box {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 9px;
+    box-sizing: border-box;
     height: 28px;
-    margin-top: 16px;
+    padding: 10px 0;
   }
-
-  .about-us_pagination .swiper-pagination-bullet {
-    width: 8px;
-    height: 8px;
-    margin: 0;
-    border-radius: 100%;
-    background-color: var(--color-main);
-    opacity: 0.2;
-    cursor: pointer;
-  }
-
-  .about-us_pagination .swiper-pagination-bullet-active {
-    opacity: 1;
-  }
-  */
 
   .about-us_pagination {
-    height: 28px;
-    margin-top: 16px;
+    position: static !important;
+    inset: auto !important;
+    width: auto !important;
+    transform: none !important;
+    --swiper-pagination-bullet-horizontal-gap: 4px;
   }
 
   .about-us_swiper .about-us_pagination.swiper-pagination-bullets-dynamic {
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-    display: block;
     overflow: hidden;
     font-size: 0;
   }
@@ -148,7 +139,6 @@
 
   .about-us_pagination .swiper-pagination-bullet-active {
     opacity: 1;
-    background-color: var(--color-main);
   }
 }
 
@@ -167,7 +157,7 @@
     height: 478px;
   }
 
-  .about-us_btn {
-    top: 236px;
+  .about-us_pagination {
+    --swiper-pagination-bullet-horizontal-gap: 6px;
   }
 }
