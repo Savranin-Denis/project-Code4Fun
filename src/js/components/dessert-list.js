@@ -15,6 +15,9 @@ const desktopCategories = document.querySelector('.dessert-list__categories');
 const dropdownCategories = document.querySelector(
   '.dessert-list__dropdown-menu'
 );
+const dropdownPanel = document.querySelector(
+  '.dessert-list__dropdown-panel'
+);
 const dropdown = document.querySelector('.dessert-list__dropdown');
 const dropdownButton = document.querySelector(
   '.dessert-list__dropdown-button'
@@ -58,7 +61,7 @@ async function showLoadError() {
 
 function closeDropdown() {
   dropdownButton.setAttribute('aria-expanded', 'false');
-  dropdownCategories.hidden = true;
+  dropdownPanel.hidden = true;
 }
 
 function updateActiveCategory(categoryId, categoryName) {
@@ -106,6 +109,7 @@ async function initDessertList() {
     !filters ||
     !desktopCategories ||
     !dropdownCategories ||
+    !dropdownPanel ||
     !dropdown ||
     !dropdownButton ||
     !selectedCategory ||
@@ -179,10 +183,10 @@ function handleCategoryClick(event) {
 }
 
 function handleDropdownToggle() {
-  const willOpen = dropdownCategories.hidden;
+  const willOpen = dropdownPanel.hidden;
 
   dropdownButton.setAttribute('aria-expanded', String(willOpen));
-  dropdownCategories.hidden = !willOpen;
+  dropdownPanel.hidden = !willOpen;
 }
 
 function handleOutsideClick(event) {
@@ -192,7 +196,7 @@ function handleOutsideClick(event) {
 }
 
 function handleEscape(event) {
-  if (event.key === 'Escape' && !dropdownCategories.hidden) {
+  if (event.key === 'Escape' && !dropdownPanel.hidden) {
     closeDropdown();
     dropdownButton.focus();
   }
