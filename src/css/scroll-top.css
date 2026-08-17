@@ -42,16 +42,9 @@
   flex-shrink: 0;
 }
 
-@media screen and (min-width: 768px) {
-  .scroll-top_btn {
-    bottom: 32px;
-    right: 32px;
-  }
-}
-
 @media screen and (min-width: 1440px) {
   .scroll-top_btn {
-    bottom: 64px;
-    right: max(64px, calc((100vw - 1440px) / 2 + 64px));
+    width: 60px;
+    height: 60px;
   }
 }

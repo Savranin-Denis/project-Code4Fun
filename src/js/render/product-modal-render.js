@@ -29,12 +29,12 @@ export function renderProductModal({
 }
 
 function createStarsProductModel(rate) {
-    const value = Math.floor(rate);
-    const half = rate % 1 >= 0.5 ? 'half' : '';
+  const value = Math.floor(rate);
+  const half = rate % 1 >= 0.5 ? 'half' : '';
 
-    const stars = Array.from(
-        { length: 5} , 
-        () => `
+  const stars = Array.from(
+    { length: 5 },
+    () => `
           <div class="star">
             <svg class="star-empty" aria-hidden="true">
                 <use href="${starSprite}#star-empty"></use>
@@ -49,11 +49,11 @@ function createStarsProductModel(rate) {
             </svg>
           </div>
         `
-    ).join('');
+  ).join('');
 
-    return `
+  return `
       <div class="rating value-${value} ${half}" aria-label="Оцінка ${rate} з 5">
-        <div class="star-container">
+        <div class="star-container modal-star">
           ${stars}
         </div>
       </div>
