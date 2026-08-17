@@ -76,6 +76,10 @@
     background-color: var(--slider-arrow-bg-normal);
     color: var(--slider-arrow-icon-color);
     outline: none;
+    transition:
+      background-color var(--transition),
+      border-color var(--transition),
+      opacity var(--transition);
   }
 
   .about-us_icon {
@@ -135,6 +139,9 @@
     background-color: var(--color-main);
     opacity: 0.2;
     cursor: pointer;
+    transition:
+      background-color var(--transition),
+      opacity var(--transition);
   }
 
   .about-us_pagination .swiper-pagination-bullet-active {
