@@ -25,8 +25,7 @@
 
 .order-modal-box {
   position: relative;
-  width: 100%;
-  max-width: 768px;
+  width: 335px;
   padding: 64px 20px;
   border-radius: 16px;
   background-color: var(--color-bg);
@@ -46,6 +45,11 @@
   justify-content: center;
   padding: 4px;
   background: transparent;
+}
+
+.order-modal-close:hover,
+.order-modal-close:focus {
+  color: var(--btn-secondary-bg-hover);
 }
 
 .order-modal-title {
@@ -98,11 +102,9 @@
   display: block;
   width: 100%;
   height: 44px;
-  margin-top: 24px;
-  padding: 10px 24px;
   border-radius: 100px;
   background-color: var(--btn-primary-bg-normal);
-  font-size: 16px;
+  font-size: 18px;
   border: 2px solid transparent;
   transition:
     border-color var(--transition) background-color var(--transition),
@@ -112,6 +114,7 @@
 .order-modal-submit:hover,
 .order-modal-submit:focus-visible {
   border: 2px solid var(--input-border-color);
+  background-color: var(--btn-primary-bg-hover);
 }
 
 .order-modal-submit:active {
@@ -121,6 +124,7 @@
 @media screen and (min-width: 768px) {
   .order-modal-box {
     padding-inline: 32px;
+    width: 704px;
   }
   .order-modal-backdrop {
     padding: 32px;
@@ -134,6 +138,7 @@
 @media screen and (min-width: 1440px) {
   .order-modal-box {
     padding-inline: 64px;
+    width: 768px;
   }
   .order-modal-submit {
     width: 196px;
