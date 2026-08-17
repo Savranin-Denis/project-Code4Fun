@@ -6,3 +6,4 @@ import './js/components/feedback.js';
 import './js/components/faq.js';
 import './js/components/product-modal.js';
 import './js/components/contact-modal.js';
+import './js/components/scroll-top.js';
