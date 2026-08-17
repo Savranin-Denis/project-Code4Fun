@@ -19,7 +19,7 @@
       Оформлення замовлення
     </h2>
 
-    <form class="order-modal-form" action="#">
+    <form class="order-modal-form">
       <input class="order-modal-dessert-id" type="hidden" name="dessertId" />
       <input
         class="order-modal-dessert-name"
@@ -35,7 +35,8 @@
           id="modal-user-name"
           name="name"
           placeholder="Вікторія"
-          pattern="^[a-zA-Z\s\.]{5,28}$"
+          minlength="2"
+          maxlength="48"
           required
         />
       </div>
@@ -62,8 +63,8 @@
           id="modal-user-comment"
           name="comment"
           placeholder="Ваш коментар"
-          minlength="10"
-          maxlength="500"
+          minlength="2"
+          maxlength="256"
           required
         ></textarea>
       </div>
