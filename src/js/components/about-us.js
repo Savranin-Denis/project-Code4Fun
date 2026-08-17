@@ -3,7 +3,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import { Navigation, Pagination } from 'swiper/modules';
 
-const aboutUsSwiper = document.querySelector('.swipe-wrapper');
+const aboutUsSwiper = document.querySelector('.about-us_swipe');
 let swiper = null;
 const tabletMq = window.matchMedia('(min-width: 768px)');
 
@@ -20,10 +20,6 @@ const createAboutUsSwiper = () => {
     },
     wrapperClass: 'about-us_list',
     slideClass: 'about-us_item',
-    // pagination: {
-    //   el: '.about-us_pagination',
-    //   clickable: true,
-    // },
     pagination: {
       el: '.about-us_pagination',
       clickable: true,
