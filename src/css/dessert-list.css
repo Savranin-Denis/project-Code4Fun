@@ -342,6 +342,7 @@
 
   .dessert-list__cards {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 16px;
   }
 
   .dessert-list__load-more {
@@ -406,6 +407,7 @@
 
   .dessert-list__cards {
     grid-template-columns: repeat(4, minmax(0, 1fr));
+    row-gap: 40px;
   }
 
   .dessert-list__load-more {
