@@ -1,4 +1,3 @@
-import Swal from 'sweetalert2';
 import {
   getDessertCategories,
   getDesserts,
@@ -7,6 +6,8 @@ import {
   renderDessertCards,
   renderDessertCategories,
 } from '../render/dessert-list-render.js';
+import { setLoader } from './loader.js';
+import { notifyError } from './notify.js';
 import { openDessertModal } from './product-modal.js';
 
 const dessertSection = document.querySelector('.dessert-list');
@@ -26,7 +27,7 @@ const selectedCategory = document.querySelector(
   '.dessert-list__selected-category'
 );
 const cardsList = document.querySelector('.dessert-list__cards');
-const loader = document.querySelector('.dessert-list__loader');
+const loader = document.querySelector('[data-dessert-list-loader]');
 const loadMoreButton = document.querySelector('.dessert-list__load-more');
 const pagination = {
   page: 1,
@@ -37,7 +38,7 @@ const pagination = {
 
 function setLoading(isLoading) {
   dessertSection.setAttribute('aria-busy', String(isLoading));
-  loader.hidden = !isLoading;
+  setLoader(loader, isLoading);
   loadMoreButton.disabled = isLoading;
 
   filters.querySelectorAll('button').forEach(button => {
@@ -52,11 +53,7 @@ function updatePagination(dessertsData) {
 }
 
 async function showLoadError() {
-  await Swal.fire({
-    icon: 'error',
-    title: 'Не вдалося завантажити десерти',
-    text: 'Спробуйте оновити сторінку трохи пізніше.',
-  });
+  await notifyError('Не вдалося завантажити десерти');
 }
 
 function closeDropdown() {

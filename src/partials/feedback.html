@@ -4,7 +4,13 @@
     <p class="feedback-subtitle">
       Найкращі десерти, які я коли-небудь куштував!
     </p>
-<div class="feedback-slider-wrapper">
+
+    <div class="loader" data-feedback-loader role="status">
+      <span class="loader__spinner" aria-hidden="true"></span>
+      <span class="loader__text">Завантаження відгуків</span>
+    </div>
+
+    <div class="feedback-slider-wrapper" data-feedback-content hidden>
 
   <div class="feedback-slider swiper">
     <div class="feedback-list swiper-wrapper">
@@ -33,7 +39,7 @@
       </svg>
     </button>
   </div>
+      <div class="feedback-pagination swiper-pagination"></div>
+    </div>
   </div>
-<div class="feedback-pagination swiper-pagination"></div>
-
 </section>

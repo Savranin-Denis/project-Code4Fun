@@ -5,11 +5,14 @@ import 'swiper/css/pagination';
 
 import { getPopularProducts } from '../api/popular-products-api.js';
 import { renderPopularProducts } from '../render/popular-products-render.js';
+import { setLoader } from './loader.js';
+import { notifyError } from './notify.js';
 
 const refs = {
   section: document.querySelector('[data-popular-products-slider]'),
   viewport: document.querySelector('.popular-products__viewport'),
   list: document.querySelector('[data-popular-products-list]'),
+  loader: document.querySelector('[data-popular-products-loader]'),
   status: document.querySelector('[data-popular-products-status]'),
   pagination: document.querySelector('[data-popular-products-pagination]'),
   prevButton: document.querySelector('[data-popular-products-prev]'),
@@ -21,28 +24,31 @@ let swiper = null;
 initPopularProducts();
 
 async function initPopularProducts() {
-  if (!refs.section || !refs.viewport || !refs.list) {
+  if (!refs.section || !refs.viewport || !refs.list || !refs.loader) {
     return;
   }
 
+  setLoader(refs.loader, true);
+  refs.status.hidden = true;
+  refs.section.hidden = true;
+
   try {
-    setStatus('Завантаження...');
     const products = await getPopularProducts();
 
     if (!products.length) {
-      setStatus('Популярні товари поки відсутні.');
+      refs.status.hidden = false;
       return;
     }
 
     refs.list.innerHTML = renderPopularProducts(products);
     refs.section.hidden = false;
-    refs.status.hidden = true;
-
     refs.list.addEventListener('click', onProductButtonClick);
-
     initSwiper();
   } catch {
-    setStatus('Не вдалося завантажити популярні товари. Спробуйте пізніше.');
+    setLoader(refs.loader, false);
+    await notifyError('Не вдалося завантажити популярні товари');
+  } finally {
+    setLoader(refs.loader, false);
   }
 }
 
@@ -88,9 +94,4 @@ function onProductButtonClick(event) {
       detail: { productId },
     })
   );
-}
-
-function setStatus(message) {
-  refs.status.textContent = message;
-  refs.status.hidden = false;
 }

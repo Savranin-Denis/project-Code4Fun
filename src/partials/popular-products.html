@@ -2,8 +2,13 @@
   <div class="container popular-products__container">
     <h2 class="popular-products__title">Наші бестселлери</h2>
 
-    <div class="popular-products__status" data-popular-products-status>
-      Завантаження...
+    <div class="loader" data-popular-products-loader role="status">
+      <span class="loader__spinner" aria-hidden="true"></span>
+      <span class="loader__text">Завантаження популярних товарів</span>
+    </div>
+
+    <div class="popular-products__status" data-popular-products-status hidden>
+      Популярні товари поки відсутні.
     </div>
 
     <div class="popular-products__slider" data-popular-products-slider hidden>

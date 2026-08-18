@@ -1,5 +1,6 @@
-import Swal from 'sweetalert2';
 import { createOrder } from '../api/contact-modal-api.js';
+import { setOverlayLoader } from './loader.js';
+import { notifyError, notifySuccess } from './notify.js';
 
 const orderModalBackdrop = document.querySelector('.order-modal-backdrop');
 const orderModalNameInput = document.querySelector('#modal-user-name');
@@ -60,26 +61,28 @@ async function handleOrderSubmit(event) {
 
   try {
     orderModalSubmit.disabled = true;
+    setOverlayLoader(true);
 
     const createdOrder = await createOrder(order);
 
+    setOverlayLoader(false);
     closeOrderModal();
     event.currentTarget.reset();
 
-    await Swal.fire({
-      icon: 'success',
-      title: 'Замовлення успішно оформлено',
-      text: createdOrder.orderNum
+    await notifySuccess(
+      'Замовлення успішно оформлено',
+      createdOrder.orderNum
         ? `Номер вашого замовлення: ${createdOrder.orderNum}`
-        : 'Ми звʼяжемося з вами найближчим часом.',
-    });
+        : 'Ми звʼяжемося з вами найближчим часом.'
+    );
   } catch {
-    await Swal.fire({
-      icon: 'error',
-      title: 'Не вдалося оформити замовлення',
-      text: 'Перевірте введені дані та спробуйте ще раз.',
-    });
+    setOverlayLoader(false);
+    await notifyError(
+      'Не вдалося оформити замовлення',
+      'Перевірте введені дані та спробуйте ще раз.'
+    );
   } finally {
+    setOverlayLoader(false);
     orderModalSubmit.disabled = false;
   }
 }

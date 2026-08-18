@@ -151,42 +151,6 @@
   display: none;
 }
 
-.dessert-list__loader {
-  display: flex;
-  justify-content: center;
-  padding-block: 48px;
-}
-
-.dessert-list__loader[hidden] {
-  display: none;
-}
-
-.dessert-list__spinner {
-  width: 48px;
-  height: 48px;
-  border: 4px solid var(--btn-primary-bg-active);
-  border-top-color: var(--color-main);
-  border-radius: 50%;
-  animation: dessert-list-spin 800ms linear infinite;
-}
-
-.dessert-list__loader-text {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0;
-}
-
-@keyframes dessert-list-spin {
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 .dessert-list__cards {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
@@ -419,11 +383,5 @@
 
   .dessert-list__load-more {
     width: 198px;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .dessert-list__spinner {
-    animation-duration: 1600ms;
   }
 }
