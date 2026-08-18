@@ -17,6 +17,7 @@ closeIconUse?.setAttribute('href', '#icon-close');
 function closeDessertModal() {
   productModalOverlay.classList.remove('is-open');
   productModalOverlay.classList.add('is-closed');
+  document.activeElement?.blur();
   productModalOverlay.setAttribute('aria-hidden', 'true');
   document.removeEventListener('keydown', handleEscape);
   unlockPageScroll(PRODUCT_MODAL_LOCK);
