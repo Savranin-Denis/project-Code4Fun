@@ -37,8 +37,14 @@
     display: flex;
     align-items: center;
     gap: 12px;
-
     color: var(--color-main);
+    transition: var(--transition);
+}
+
+.footer-logo:hover,
+.footer-logo:focus {
+    color: var(--btn-primary-bg-hover);
+    transform: scale(1.1);
 }
 
 .footer-logo-icon {
@@ -70,15 +76,28 @@
     font-weight: 600;
     font-size: 16px;
     line-height: 1.5;
-
-    transition: color 250ms ease;
+    color: var(--link-color-normal);
+    text-decoration: none;
+    cursor: pointer;
+    transition: var(--transition);
 }
 
 .footer-nav-link:hover,
 .footer-nav-link:focus-visible {
-    color: var(--link-color-active);
+    color: var(--btn-primary-bg-normal);
+    text-decoration: underline;
+    text-decoration-color: var(--btn-primary-bg-normal);
+    text-underline-offset: 9px;
+    text-decoration-thickness: 1px;
 }
 
+.footer-nav-link:active {
+    color: var(--btn-primary-bg-active);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    text-decoration-color: var(--btn-primary-bg-active);
+
+}
 /* =========================
    SOCIALS
 ========================= */
