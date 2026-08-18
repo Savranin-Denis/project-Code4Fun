@@ -3,12 +3,14 @@ import { renderProductModal } from '../render/product-modal-render.js';
 import { setOverlayLoader } from './loader.js';
 import { notifyError } from './notify.js';
 import { openOrderModal } from './contact-modal.js';
+import { lockPageScroll, unlockPageScroll } from './scroll-lock.js';
 
 const productModalOverlay = document.querySelector('.product-modal-overlay');
 const closeIconUse = document.querySelector('.product-modal-close-use');
 const orderButton = document.querySelector(
   '.product-modal-info-list-element-btn'
 );
+const PRODUCT_MODAL_LOCK = 'product-modal';
 
 closeIconUse?.setAttribute('href', '#icon-close');
 
@@ -17,7 +19,7 @@ function closeDessertModal() {
   productModalOverlay.classList.add('is-closed');
   productModalOverlay.setAttribute('aria-hidden', 'true');
   document.removeEventListener('keydown', handleEscape);
-  
+  unlockPageScroll(PRODUCT_MODAL_LOCK);
 }
 
 function handleModalClick(event) {
@@ -55,6 +57,7 @@ export async function openDessertModal(id) {
     productModalOverlay.classList.add('is-open');
     productModalOverlay.setAttribute('aria-hidden', 'false');
     document.addEventListener('keydown', handleEscape);
+    lockPageScroll(PRODUCT_MODAL_LOCK);
   } catch {
     setOverlayLoader(false);
     await notifyError('Не вдалося завантажити товар');

@@ -1,6 +1,7 @@
 import { createOrder } from '../api/contact-modal-api.js';
 import { setOverlayLoader } from './loader.js';
 import { notifyError, notifySuccess } from './notify.js';
+import { lockPageScroll, unlockPageScroll } from './scroll-lock.js';
 
 const orderModalBackdrop = document.querySelector('.order-modal-backdrop');
 const orderModalNameInput = document.querySelector('#modal-user-name');
@@ -8,10 +9,12 @@ const dessertIdInput = document.querySelector('.order-modal-dessert-id');
 const dessertNameInput = document.querySelector('.order-modal-dessert-name');
 const orderModalForm = document.querySelector('.order-modal-form');
 const orderModalSubmit = document.querySelector('.order-modal-submit');
+const ORDER_MODAL_LOCK = 'order-modal';
 
 export function closeOrderModal() {
   orderModalBackdrop?.classList.add('is-hidden');
   orderModalBackdrop?.setAttribute('aria-hidden', 'true');
+  unlockPageScroll(ORDER_MODAL_LOCK);
 }
 
 export function openOrderModal({ id = '', name = '' } = {}) {
@@ -23,6 +26,7 @@ export function openOrderModal({ id = '', name = '' } = {}) {
   dessertNameInput.value = name;
   orderModalBackdrop.classList.remove('is-hidden');
   orderModalBackdrop.setAttribute('aria-hidden', 'false');
+  lockPageScroll(ORDER_MODAL_LOCK);
   orderModalNameInput?.focus();
 }
 
