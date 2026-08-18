@@ -16,6 +16,8 @@ function closeDessertModal() {
   productModalOverlay.classList.remove('is-open');
   productModalOverlay.classList.add('is-closed');
   productModalOverlay.setAttribute('aria-hidden', 'true');
+  document.removeEventListener('keydown', handleEscape);
+  
 }
 
 function handleModalClick(event) {
@@ -50,6 +52,7 @@ export async function openDessertModal(id) {
     productModalOverlay.classList.remove('is-closed');
     productModalOverlay.classList.add('is-open');
     productModalOverlay.setAttribute('aria-hidden', 'false');
+    document.addEventListener('keydown', handleEscape);
   } catch {
     await Swal.fire({
       icon: 'error',
@@ -73,5 +76,4 @@ function handlePopularProductOpen(event) {
 
 orderButton?.addEventListener('click', handleOrderButtonClick);
 productModalOverlay?.addEventListener('click', handleModalClick);
-document.addEventListener('keydown', handleEscape);
 document.addEventListener('popular-product:open', handlePopularProductOpen);
