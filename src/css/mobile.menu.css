@@ -16,6 +16,35 @@
 
     z-index: 1000;
 }
+
+.mob-close-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    border: 0;
+    background-color: transparent;
+    color: var(--color-main);
+}
+.mob-close-button:hover,
+.mob-close-button:focus{
+    color: var(--btn-primary-bg-hover);
+    background-color: transparent;
+}
+
+.mob-close-button:active {
+    color: var(--btn-primary-bg-active);
+    background-color: transparent;
+}
+
+
+.modal-close-icon {
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
+}
 .mob-menu.is-open {
     opacity: 1;
 visibility: visible;
@@ -31,7 +60,7 @@ body.no-scroll{
     width: 158px;
     height: 72px;
     padding: 0;
-   
+    color: var(--color-main);
 }
 .mob-wrap{
     width: 100%;
@@ -41,12 +70,27 @@ body.no-scroll{
     align-items: center;
     justify-content: space-between;
     height: 72px;
+    max-width: 375px;
+    margin: 0 auto;
     padding: 0 20px;
+    box-sizing: border-box;
 }
 .mob-logo-img{
     display: block;
     width: 158px;
-    height: 72px;
+    height: auto;
+    transition: transform var(--transition);
+}
+.mob-logo:hover,
+.mob-logo:focus{
+    color: var(--btn-primary-bg-hover);
+}
+.mob-logo:active{
+    color: var(--btn-primary-bg-active);
+}
+.mob-logo:hover .mob-logo-img,
+.mob-logo:active .mob-logo-img{
+    transform: scale(1.1);
 }
 .mob-list{
     display: flex;
@@ -55,39 +99,26 @@ body.no-scroll{
     margin-bottom: 36px;
 }
 .mob-link{
+    display: block;
     width: 335px;
     height: 48px;
-}
-.mob-close-button{
-    display: flex;
-    align-items: center;
-justify-content: center;
-width: 24px;
-height: 24px;
-padding: 0;
-border: 0;
-background: transparent;
-}
-.modal-close-icon{
-    width: 24px;
-    height: 24px;
 }
 
 .header-btn-mob{
     display: flex;
-align-items: center;
-justify-content: center;
-margin: 16px 0;
-box-sizing: border-box;
-width: 335px;
-height: 40px;
-padding: 8px 20px;
+    align-items: center;
+    justify-content: center;
+    margin: 16px 0;
+    box-sizing: border-box;
+    width: 335px;
+    height: 40px;
+    padding: 8px 20px;
 }
 .mob-content{
-    width: 335px;
-    padding-top: 28px;
-    margin-left: auto;
-    margin-right: auto;
+    max-width: 375px;
+    margin: 0 auto;
+    padding: 28px 20px 0;
+    box-sizing: border-box;
 }
 
 
@@ -95,5 +126,4 @@ padding: 8px 20px;
     .mob-menu{
         display: none;
     }
-    
 }

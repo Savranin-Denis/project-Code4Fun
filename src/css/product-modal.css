@@ -61,7 +61,7 @@
 }
 .product-modal-img-div {
   width: 295px;
-  height: 211px;
+  height: 221px;
   overflow: hidden;
 }
 
@@ -114,11 +114,16 @@
   fill: #000 !important;
 }
 
+.product-modal-rating .star{
+  width: 16px;
+  height: 15px;
+}
+
 .product-modal-info-list-element-composition {
   font-weight: 400;
   font-size: 14px;
   line-height: 1.5;
-  margin-bottom: 24px;
+  margin-bottom: 32px;
 }
 
 .product-modal-info-list-element-btn {
