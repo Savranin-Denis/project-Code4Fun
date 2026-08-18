@@ -1,3 +1,5 @@
+import starSprite from '../../img/star-rating.icons.svg';
+
 export function createFeedbackMarkup(feedbacks) {
   return feedbacks
     .map(({ _id, author, rate, description }) => {
@@ -9,15 +11,15 @@ export function createFeedbackMarkup(feedbacks) {
         () => `
           <div class="star">
             <svg class="star-empty" aria-hidden="true">
-              <use href="../../img/star-rating.icons.svg#star-empty"></use>
+              <use href="${starSprite}star-empty"></use>
             </svg>
 
             <svg class="star-half" aria-hidden="true">
-              <use href="../../img/star-rating.icons.svg#star-half"></use>
+              <use href="${starSprite}#star-half"></use>
             </svg>
 
             <svg class="star-filled" aria-hidden="true">
-              <use href="../../img/star-rating.icons.svg#star-filled"></use>
+              <use href="${starSprite}#star-filled"></use>
             </svg>
           </div>
         `
