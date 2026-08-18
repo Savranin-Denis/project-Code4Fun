@@ -1,4 +1,3 @@
-import starSprite from '../../img/sprite.svg?url';
 import { getRatingStars } from '../components/rating.js';
 
 const titleM = document.querySelector('.product-modal-info-list-element-title');
@@ -39,7 +38,7 @@ function createStarsProductModel(rate) {
             viewBox="0 0 34 32"
             aria-hidden="true"
           >
-            <use href="${starSprite}#star-${type}"></use>
+            <use href="#star-${type}"></use>
           </svg>
         </div>
       `

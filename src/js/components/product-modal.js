@@ -1,4 +1,3 @@
-import spriteUrl from '../../img/sprite.svg';
 import { getProduct } from '../api/product-modal-api.js';
 import { renderProductModal } from '../render/product-modal-render.js';
 import { setOverlayLoader } from './loader.js';
@@ -11,7 +10,7 @@ const orderButton = document.querySelector(
   '.product-modal-info-list-element-btn'
 );
 
-closeIconUse?.setAttribute('href', `${spriteUrl}#icon-close`);
+closeIconUse?.setAttribute('href', '#icon-close');
 
 function closeDessertModal() {
   productModalOverlay.classList.remove('is-open');

@@ -1,5 +1,3 @@
-import spriteUrl from '../../img/sprite.svg';
-
 function getCategoryName(product) {
   return product.category?.name ?? product.category ?? '';
 }
@@ -41,7 +39,7 @@ export function createPopularProductCard(product) {
               aria-label="Відкрити деталі товару ${product.name}"
             >
               <svg class="popular-products-card__icon" width="24" height="24">
-                <use href="${spriteUrl}#icon-arrow-upright"></use>
+                <use href="#icon-arrow-upright"></use>
               </svg>
             </button>
           </div>

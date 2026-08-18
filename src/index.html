@@ -9,19 +9,37 @@
       rel="preload"
       as="image"
       href="./img/hero/mobile/hero-bg-mob.webp"
-      media="(max-width: 767px)"
+      media="(max-width: 767px) and (max-resolution: 1.99dppx)"
+    />
+    <link
+      rel="preload"
+      as="image"
+      href="./img/hero/mobile/hero-bg-mob2x.webp"
+      media="(max-width: 767px) and (min-resolution: 2dppx)"
     />
     <link
       rel="preload"
       as="image"
       href="./img/hero/tablet/hero-bg-tab.webp"
-      media="(min-width: 768px) and (max-width: 1439px)"
+      media="(min-width: 768px) and (max-width: 1439px) and (max-resolution: 1.99dppx)"
+    />
+    <link
+      rel="preload"
+      as="image"
+      href="./img/hero/tablet/hero-bg-tab_2x.webp"
+      media="(min-width: 768px) and (max-width: 1439px) and (min-resolution: 2dppx)"
     />
     <link
       rel="preload"
       as="image"
       href="./img/hero/desktop/hero-bg-pc.webp"
-      media="(min-width: 1440px)"
+      media="(min-width: 1440px) and (max-resolution: 1.99dppx)"
+    />
+    <link
+      rel="preload"
+      as="image"
+      href="./img/hero/desktop/hero-bg-pc_2x.webp"
+      media="(min-width: 1440px) and (min-resolution: 2dppx)"
     />
     <link
       rel="stylesheet"
@@ -39,6 +57,8 @@
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
+    <load src="./img/sprite.svg" />
+
     <load src="./partials/header.html" />
 
     <main>
