@@ -1,4 +1,5 @@
-import starSprite from 'css-star-rating/images/star-rating.icons.svg';
+import starSprite from '../../img/sprite.svg?url';
+import { getRatingStars } from '../components/rating.js';
 
 const titleM = document.querySelector('.product-modal-info-list-element-title');
 const priceM = document.querySelector('.product-modal-info-list-element-price');
@@ -29,30 +30,24 @@ export function renderProductModal({
 }
 
 function createStarsProductModel(rate) {
-  const value = Math.floor(rate);
-  const half = rate % 1 >= 0.5 ? 'half' : '';
-
-  const stars = Array.from(
-    { length: 5 },
-    () => `
-          <div class="star">
-            <svg class="star-empty" aria-hidden="true">
-                <use href="${starSprite}#star-empty"></use>
-            </svg>
-
-            <svg class="star-half" aria-hidden="true">
-                <use href="${starSprite}#star-half"></use>
-            </svg>
-
-            <svg class="star-filled" aria-hidden="true">
-                <use href="${starSprite}#star-filled"></use>
-            </svg>
-          </div>
-        `
-  ).join('');
+  const stars = getRatingStars(rate)
+    .map(
+      type => `
+        <div class="star">
+          <svg
+            class="star__icon star__icon--${type}"
+            viewBox="0 0 34 32"
+            aria-hidden="true"
+          >
+            <use href="${starSprite}#star-${type}"></use>
+          </svg>
+        </div>
+      `
+    )
+    .join('');
 
   return `
-      <div class="product-modal-rating rating value-${value} ${half}" aria-label="Оцінка ${rate} з 5" style="margin:0">
+      <div class="product-modal-rating" aria-label="Оцінка ${rate} з 5">
         <div class="star-container modal-star">
           ${stars}
         </div>
