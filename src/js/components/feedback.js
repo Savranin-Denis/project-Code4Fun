@@ -4,8 +4,6 @@ import { Navigation, Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import 'css-star-rating/css/star-rating.css';
-
 import { getFeedbacks } from '../api/feedback-list-api.js';
 import { createFeedbackMarkup } from '../render/feedback-list-render.js';
 import { setLoader } from './loader.js';

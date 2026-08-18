@@ -1,4 +1,3 @@
-import starSprite from '../../img/sprite.svg?url';
 import { getRatingStars } from '../components/rating.js';
 
 function renderStarIcon(type) {
@@ -8,7 +7,7 @@ function renderStarIcon(type) {
       viewBox="0 0 34 32"
       aria-hidden="true"
     >
-      <use href="${starSprite}#star-${type}"></use>
+      <use href="#star-${type}"></use>
     </svg>
   `;
 }
