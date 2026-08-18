@@ -193,17 +193,6 @@
         white-space: nowrap;
         align-items: center;
     }
-
-    .header-nav {
-        display: flex;
-        align-items: center;
-        gap: 16px;
-        margin-left: auto;
-    }
-
-    .headericons-menu {
-        display: none;
-    }
 }
 
 
