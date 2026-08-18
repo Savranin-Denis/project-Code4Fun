@@ -89,6 +89,10 @@ body {
   background-color: var(--color-bg);
 }
 
+body.is-scroll-locked {
+  overflow: hidden;
+}
+
 main {
   flex-grow: 1;
 }
