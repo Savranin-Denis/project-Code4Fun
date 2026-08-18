@@ -95,24 +95,25 @@ RATING
 .star-container {
     display: flex;
     gap: 4px;
+    margin: 0 !important;
 }
 
-.feedback-rating .star {
+.star {
     width: 20px;
     height: 20px;
-}
-
-.feedback-rating.star-svg .star svg {
-    color: var(--color-main) !important;
     fill: var(--color-main) !important;
 }
 
-.feedback-rating.star-svg .star-empty,
-.feedback-rating.star-svg .star-half,
-.feedback-rating.star-svg .star-filled {
-    color: var(--color-main) !important;
+.star__icon {
+    width: 100%;
+    height: 100%;
     fill: var(--color-main) !important;
 }
+
+.star__icon--empty {
+    fill: var(--color-main) !important;
+}
+
 
 
 

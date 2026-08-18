@@ -1,37 +1,29 @@
-import starSprite from '../../img/star-rating.icons.svg';
+import starSprite from '../../img/sprite.svg?url';
+import { getRatingStars } from '../components/rating.js';
+
+function renderStarIcon(type) {
+  return `
+    <svg
+      class="star__icon star__icon--${type}"
+      viewBox="0 0 34 32"
+      aria-hidden="true"
+    >
+      <use href="${starSprite}#star-${type}"></use>
+    </svg>
+  `;
+}
 
 export function createFeedbackMarkup(feedbacks) {
   return feedbacks
     .map(({ _id, author, rate, description }) => {
-      const value = Math.floor(rate);
-      const half = rate % 1 === 0.5 ? 'half' : '';
-
-      const stars = Array.from(
-        { length: 5 },
-        () => `
-          <div class="star">
-            <svg class="star-empty" aria-hidden="true">
-              <use href="${starSprite}star-empty"></use>
-            </svg>
-
-            <svg class="star-half" aria-hidden="true">
-              <use href="${starSprite}#star-half"></use>
-            </svg>
-
-            <svg class="star-filled" aria-hidden="true">
-              <use href="${starSprite}#star-filled"></use>
-            </svg>
-          </div>
-        `
-      ).join('');
+      const stars = getRatingStars(rate)
+        .map(type => `<div class="star">${renderStarIcon(type)}</div>`)
+        .join('');
 
       return `
         <div class="feedback-slide swiper-slide" data-id="${_id}">
           <article class="feedback-card">
-            <div
-              class="feedback-rating rating value-${value} ${half} star-svg"
-              aria-label="Оцінка ${rate} з 5"
-            >
+            <div class="feedback-rating" aria-label="Оцінка ${rate} з 5">
               <div class="star-container">
                 ${stars}
               </div>
