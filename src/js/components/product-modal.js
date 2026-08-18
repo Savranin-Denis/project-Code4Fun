@@ -1,7 +1,8 @@
-import Swal from 'sweetalert2';
 import spriteUrl from '../../img/sprite.svg';
 import { getProduct } from '../api/product-modal-api.js';
 import { renderProductModal } from '../render/product-modal-render.js';
+import { setOverlayLoader } from './loader.js';
+import { notifyError } from './notify.js';
 import { openOrderModal } from './contact-modal.js';
 
 const productModalOverlay = document.querySelector('.product-modal-overlay');
@@ -42,6 +43,8 @@ function handleEscape(event) {
 }
 
 export async function openDessertModal(id) {
+  setOverlayLoader(true);
+
   try {
     const product = await getProduct(id);
     renderProductModal(product);
@@ -54,11 +57,10 @@ export async function openDessertModal(id) {
     productModalOverlay.setAttribute('aria-hidden', 'false');
     document.addEventListener('keydown', handleEscape);
   } catch {
-    await Swal.fire({
-      icon: 'error',
-      title: 'Не вдалося завантажити товар',
-      text: 'Спробуйте оновити сторінку трохи пізніше.',
-    });
+    setOverlayLoader(false);
+    await notifyError('Не вдалося завантажити товар');
+  } finally {
+    setOverlayLoader(false);
   }
 }
 
