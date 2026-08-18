@@ -50,7 +50,8 @@ function handleOrderModalEscape(event) {
 async function handleOrderSubmit(event) {
   event.preventDefault();
 
-  const formData = new FormData(event.currentTarget);
+  const form = event.currentTarget;
+  const formData = new FormData(form);
   const order = {
     name: formData.get('name').trim(),
     phone: formData.get('phone').replace(/\D/g, ''),
@@ -64,7 +65,7 @@ async function handleOrderSubmit(event) {
     const createdOrder = await createOrder(order);
 
     closeOrderModal();
-    event.currentTarget.reset();
+    form.reset();
 
     await Swal.fire({
       icon: 'success',
@@ -73,7 +74,9 @@ async function handleOrderSubmit(event) {
         ? `Номер вашого замовлення: ${createdOrder.orderNum}`
         : 'Ми звʼяжемося з вами найближчим часом.',
     });
-  } catch {
+  } catch (error) {
+    console.error('Failed to create order:', error);
+
     await Swal.fire({
       icon: 'error',
       title: 'Не вдалося оформити замовлення',
