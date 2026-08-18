@@ -73,3 +73,31 @@
     </form>
   </div>
 </div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const orderForm = document.querySelector('.order-modal-form');
+        const contactModal = document.querySelector('.order-modal-backdrop');
+        const successModal = document.querySelector('.success-modal-backdrop');
+
+        if (orderForm) {
+            orderForm.addEventListener('submit', (event) => {
+                event.preventDefault();
+
+                if (contactModal) {
+                    contactModal.classList.add('is-hidden');
+                    contactModal.setAttribute('aria-hidden', 'true');
+                }
+
+                if (successModal) {
+                    successModal.classList.remove('is-hidden');
+                    successModal.removeAttribute('aria-hidden');
+                } else {
+                    alert('Заявку успішно надіслано!');
+                }
+
+                orderForm.reset();
+            });
+        }
+    });
+</script>
