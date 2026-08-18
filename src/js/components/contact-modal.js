@@ -51,7 +51,8 @@ function handleOrderModalEscape(event) {
 async function handleOrderSubmit(event) {
   event.preventDefault();
 
-  const formData = new FormData(event.currentTarget);
+  const form = event.currentTarget;
+  const formData = new FormData(form);
   const order = {
     name: formData.get('name').trim(),
     phone: formData.get('phone').replace(/\D/g, ''),
@@ -67,7 +68,7 @@ async function handleOrderSubmit(event) {
 
     setOverlayLoader(false);
     closeOrderModal();
-    event.currentTarget.reset();
+    form.reset();
 
     await notifySuccess(
       'Замовлення успішно оформлено',
