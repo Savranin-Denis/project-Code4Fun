@@ -15,9 +15,11 @@ const PRODUCT_MODAL_LOCK = 'product-modal';
 closeIconUse?.setAttribute('href', '#icon-close');
 
 function closeDessertModal() {
+  if (document.activeElement instanceof HTMLElement) {
+    document.activeElement.blur();
+  }
   productModalOverlay.classList.remove('is-open');
   productModalOverlay.classList.add('is-closed');
-  document.activeElement?.blur();
   productModalOverlay.setAttribute('aria-hidden', 'true');
   document.removeEventListener('keydown', handleEscape);
   unlockPageScroll(PRODUCT_MODAL_LOCK);

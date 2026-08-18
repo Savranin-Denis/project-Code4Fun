@@ -12,6 +12,9 @@ const orderModalSubmit = document.querySelector('.order-modal-submit');
 const ORDER_MODAL_LOCK = 'order-modal';
 
 export function closeOrderModal() {
+  if (document.activeElement instanceof HTMLElement) {
+    document.activeElement.blur();
+  }
   orderModalBackdrop?.classList.add('is-hidden');
   orderModalBackdrop?.setAttribute('aria-hidden', 'true');
   unlockPageScroll(ORDER_MODAL_LOCK);
