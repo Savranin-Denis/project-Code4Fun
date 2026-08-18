@@ -8,15 +8,18 @@
     display: block;
     width: 158px;
     height: auto;
+    transition: transform var(--transition);
+    
 }
 .logo{
     display: block;
     color: var(--color-main);
-    transition: color var(--transition);
+    
 }
 .logo:hover,
 .logo:focus{
     color: var(--btn-primary-bg-hover);
+    transform: scale(1.1);
 }
 
 
@@ -62,8 +65,16 @@
     color: var(--btn-primary-bg-normal);
     text-decoration: underline;
     text-decoration-color: var(--btn-primary-bg-normal);
+    text-underline-offset: 9px;
+    text-decoration-thickness: 1px;
 }
-
+.nav-link:active,
+.mob-link:active{
+    color: var(--btn-primary-bg-active);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    text-decoration-color: var(--btn-primary-bg-active);
+}
 .header-btn{
     display: none;
 }
@@ -150,7 +161,6 @@
     }
 }   
 
-
 /*Desktop*/
 @media screen and (min-width: 1440px) {
     .nav{
@@ -161,5 +171,4 @@
         gap: 32px;
     }
    
-    
 }
