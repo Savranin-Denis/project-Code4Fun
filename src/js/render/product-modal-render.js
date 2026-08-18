@@ -52,7 +52,7 @@ function createStarsProductModel(rate) {
   ).join('');
 
   return `
-      <div class="rating value-${value} ${half}" aria-label="Оцінка ${rate} з 5">
+      <div class="product-modal-rating rating value-${value} ${half}" aria-label="Оцінка ${rate} з 5" style="margin:0">
         <div class="star-container modal-star">
           ${stars}
         </div>
