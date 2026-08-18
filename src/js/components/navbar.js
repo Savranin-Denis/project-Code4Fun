@@ -1,3 +1,5 @@
+import { lockPageScroll, unlockPageScroll } from './scroll-lock.js';
+
 (() => {
   const refs = {
     openModalBtn: document.querySelector('[data-menu-open]'),
@@ -22,12 +24,11 @@
 
   function openMenu() {
     refs.modal.classList.add('is-open');
-    document.body.classList.add('no-scroll');
+    lockPageScroll('mobile-menu');
   }
 
   function closeMenu() {
     refs.modal.classList.remove('is-open');
-    document.body.classList.remove('no-scroll');
+    unlockPageScroll('mobile-menu');
   }
 })();
-
