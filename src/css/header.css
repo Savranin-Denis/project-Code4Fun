@@ -17,6 +17,8 @@
     display: block;
     width: 158px;
     height: auto;
+    /*height: 64.57px;
+flex-shrink: 0;*/
     transition: transform var(--transition);
 }
 
@@ -171,6 +173,7 @@
 
 /* TABLET */
 @media screen and (min-width: 768px) {
+    
 
     .mob-menu-open {
         display: none;
@@ -209,6 +212,10 @@
 
 /* DESKTOP */
 @media screen and (min-width: 1440px) {
+    .header-container{
+        padding-left: 64px;
+        padding-right: 64px;
+    }
 
     .nav {
         margin-left: auto;
