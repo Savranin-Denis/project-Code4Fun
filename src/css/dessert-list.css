@@ -220,7 +220,7 @@
   justify-content: center;
   width: 48px;
   height: 48px;
-  border: 1px solid var(--slider-arrow-border-normal);
+  border: 2px solid var(--slider-arrow-border-normal);
   border-radius: 50%;
   background-color: var(--slider-arrow-bg-normal);
   transition: background-color 250ms ease;
