@@ -99,11 +99,17 @@
 }
 
 @media (min-width: 1440px) {
+  .hero {
+    padding-block: 306px;
+  }
+
   .hero-title {
-    max-width: 766px;
+    max-width: 768px;
+    font-size: 56px;
+    margin-bottom: 32px;
   }
 
   .hero-text {
-    max-width: 760px;
+    max-width: 768px;
   }
 }
