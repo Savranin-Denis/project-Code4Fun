@@ -1,4 +1,35 @@
 <section class="hero" id="hero">
+  <picture>
+    <source
+      media="(min-width: 1440px)"
+      srcset="
+        ./img/hero/desktop/hero-bg-pc.webp    1x,
+        ./img/hero/desktop/hero-bg-pc_2x.webp 2x
+      "
+      width="1440"
+      height="900"
+    />
+    <source
+      media="(min-width: 768px)"
+      srcset="
+        ./img/hero/tablet/hero-bg-tab.webp    1x,
+        ./img/hero/tablet/hero-bg-tab_2x.webp 2x
+      "
+      width="768"
+      height="900"
+    />
+    <img
+      src="./img/hero/mobile/hero-bg-mob.webp"
+      srcset="
+        ./img/hero/mobile/hero-bg-mob.webp   1x,
+        ./img/hero/mobile/hero-bg-mob2x.webp 2x
+      "
+      width="375"
+      height="738"
+      alt="Ягідний тарт"
+      fetchpriority="high"
+    />
+  </picture>
   <div class="hero-container container">
     <h1 class="hero-title">Ласкаво просимо до Солодкої Майстерні</h1>
     <p class="hero-text">
