@@ -10,8 +10,15 @@
       as="image"
       type="image/webp"
       href="./img/hero/mobile/hero-bg-mob.webp"
-      imagesrcset="./img/hero/mobile/hero-bg-mob.webp 1x, ./img/hero/mobile/hero-bg-mob2x.webp 2x"
-      media="(max-width: 767px)"
+      media="(max-width: 767px) and (max-resolution: 1.99dppx)"
+      fetchpriority="high"
+    />
+    <link
+      rel="preload"
+      as="image"
+      type="image/webp"
+      href="./img/hero/mobile/hero-bg-mob2x.webp"
+      media="(max-width: 767px) and (min-resolution: 2dppx)"
       fetchpriority="high"
     />
     <link
@@ -19,16 +26,28 @@
       as="image"
       type="image/webp"
       href="./img/hero/tablet/hero-bg-tab.webp"
-      imagesrcset="./img/hero/tablet/hero-bg-tab.webp 1x, ./img/hero/tablet/hero-bg-tab@2x.webp 2x"
-      media="(min-width: 768px) and (max-width: 1439px)"
+      media="(min-width: 768px) and (max-width: 1439px) and (max-resolution: 1.99dppx)"
+    />
+    <link
+      rel="preload"
+      as="image"
+      type="image/webp"
+      href="./img/hero/tablet/hero-bg-tab_2x.webp"
+      media="(min-width: 768px) and (max-width: 1439px) and (min-resolution: 2dppx)"
     />
     <link
       rel="preload"
       as="image"
       type="image/webp"
       href="./img/hero/desktop/hero-bg-pc.webp"
-      imagesrcset="./img/hero/desktop/hero-bg-pc.webp 1x, ./img/hero/desktop/hero-bg-pc@2x.webp 2x"
-      media="(min-width: 1440px)"
+      media="(min-width: 1440px) and (max-resolution: 1.99dppx)"
+    />
+    <link
+      rel="preload"
+      as="image"
+      type="image/webp"
+      href="./img/hero/desktop/hero-bg-pc_2x.webp"
+      media="(min-width: 1440px) and (min-resolution: 2dppx)"
     />
     <link
       rel="stylesheet"
@@ -46,6 +65,8 @@
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
+    <load src="./img/sprite.svg" />
+
     <load src="./partials/header.html" />
 
     <main>
@@ -64,8 +85,6 @@
     <load src="./partials/mobile-menu.html" />
     <load src="./partials/scroll-top.html" />
     <load src="./partials/loader.html" />
-
-    <load src="./img/sprite.svg" />
 
     <script type="module" src="./main.js"></script>
   </body>
