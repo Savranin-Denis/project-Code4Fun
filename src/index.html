@@ -8,38 +8,38 @@
     <link
       rel="preload"
       as="image"
-      href="./img/hero/mobile/hero-bg-mob.webp"
-      media="(max-width: 767px) and (max-resolution: 1.99dppx)"
+      type="image/webp"
+      href="/img/hero/mobile/hero-bg-mob.webp"
+      imagesrcset="
+        /img/hero/mobile/hero-bg-mob.webp   1x,
+        /img/hero/mobile/hero-bg-mob2x.webp 2x
+      "
+      media="(max-width: 767px)"
+      fetchpriority="high"
     />
     <link
       rel="preload"
       as="image"
-      href="./img/hero/mobile/hero-bg-mob2x.webp"
-      media="(max-width: 767px) and (min-resolution: 2dppx)"
+      type="image/webp"
+      href="/img/hero/tablet/hero-bg-tab.webp"
+      imagesrcset="
+        /img/hero/tablet/hero-bg-tab.webp    1x,
+        /img/hero/tablet/hero-bg-tab_2x.webp 2x
+      "
+      media="(min-width: 768px) and (max-width: 1439px)"
+      fetchpriority="high"
     />
     <link
       rel="preload"
       as="image"
-      href="./img/hero/tablet/hero-bg-tab.webp"
-      media="(min-width: 768px) and (max-width: 1439px) and (max-resolution: 1.99dppx)"
-    />
-    <link
-      rel="preload"
-      as="image"
-      href="./img/hero/tablet/hero-bg-tab_2x.webp"
-      media="(min-width: 768px) and (max-width: 1439px) and (min-resolution: 2dppx)"
-    />
-    <link
-      rel="preload"
-      as="image"
-      href="./img/hero/desktop/hero-bg-pc.webp"
-      media="(min-width: 1440px) and (max-resolution: 1.99dppx)"
-    />
-    <link
-      rel="preload"
-      as="image"
-      href="./img/hero/desktop/hero-bg-pc_2x.webp"
-      media="(min-width: 1440px) and (min-resolution: 2dppx)"
+      type="image/webp"
+      href="/img/hero/desktop/hero-bg-pc.webp"
+      imagesrcset="
+        /img/hero/desktop/hero-bg-pc.webp    1x,
+        /img/hero/desktop/hero-bg-pc_2x.webp 2x
+      "
+      media="(min-width: 1440px)"
+      fetchpriority="high"
     />
     <link
       rel="stylesheet"
