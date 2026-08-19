@@ -1,0 +1,959 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/project-Code4Fun/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sweet workshop</title>
+    <link
+      rel="preload"
+      as="image"
+      type="image/webp"
+      href="/project-Code4Fun/assets/hero-bg-mob-DzqMfZLz.webp"
+      media="(max-width: 767px) and (max-resolution: 1.99dppx)"
+      fetchpriority="high"
+    />
+    <link
+      rel="preload"
+      as="image"
+      type="image/webp"
+      href="/project-Code4Fun/assets/hero-bg-mob2x-CR4IvGj0.webp"
+      media="(max-width: 767px) and (min-resolution: 2dppx)"
+      fetchpriority="high"
+    />
+    <link
+      rel="preload"
+      as="image"
+      type="image/webp"
+      href="/project-Code4Fun/assets/hero-bg-tab-C4MFWAEt.webp"
+      media="(min-width: 768px) and (max-width: 1439px) and (max-resolution: 1.99dppx)"
+    />
+    <link
+      rel="preload"
+      as="image"
+      type="image/webp"
+      href="/project-Code4Fun/assets/hero-bg-tab_2x-Uke7miSm.webp"
+      media="(min-width: 768px) and (max-width: 1439px) and (min-resolution: 2dppx)"
+    />
+    <link
+      rel="preload"
+      as="image"
+      type="image/webp"
+      href="/project-Code4Fun/assets/hero-bg-pc-Bx3sNJxa.webp"
+      media="(min-width: 1440px) and (max-resolution: 1.99dppx)"
+    />
+    <link
+      rel="preload"
+      as="image"
+      type="image/webp"
+      href="/project-Code4Fun/assets/hero-bg-pc_2x-hIuemhgO.webp"
+      media="(min-width: 1440px) and (min-resolution: 2dppx)"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css"
+      integrity="sha512-q6WgHqiHlKyOqslT/lgBgodhd03Wp4BEqKeW6nNtlOY4quzyG3VoQKFrieaCeSnuVseNKRGpGeDU3qPmabCANg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <script type="module" crossorigin src="/project-Code4Fun/index.js"></script>
+    <link rel="modulepreload" crossorigin href="/project-Code4Fun/assets/vendor-BTNHQHsA.js">
+    <link rel="stylesheet" crossorigin href="/project-Code4Fun/assets/vendor-C-6Mq-WU.css">
+    <link rel="stylesheet" crossorigin href="/project-Code4Fun/assets/index-Bq_u1R5E.css">
+  </head>
+  <body>
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden">
+    <defs>
+        <symbol id="icon-youtube" fill="none" viewBox="0 0 24 24">
+            <path fill="currentColor" d="M21.593 7.203a2.5 2.5 0 0 0-1.762-1.766C18.265 5.007 12 5 12 5s-6.264-.007-7.831.404a2.56 2.56 0 0 0-1.766 1.778c-.413 1.566-.417 4.814-.417 4.814s-.004 3.264.406 4.814c.23.857.905 1.534 1.763 1.765 1.582.43 7.83.437 7.83.437s6.265.007 7.831-.403a2.52 2.52 0 0 0 1.767-1.763c.414-1.565.417-4.812.417-4.812s.02-3.265-.407-4.831M9.996 15.005l.005-6 5.207 3.005z"/>
+        </symbol>
+        <symbol id="icon-logo" fill="currentColor" viewBox="0 0 146 31">
+            <path d="M41.327 27.237q1.448.75 2.44-.482c.992-1.232.742-1.68.242-2.574L40.2 16.998l-2.897 7.88zm-11.371-2.252h3.78l5.177-12.973q.322-.75.242-1.474-.082-.724-.885-1.1l-4.452-1.93q-.751-.375-1.502 0c-.751.376-.769.626-.805 1.127zm-15.89 0h3.715l-1.502-16.35q-.054-.804-.724-1.18t-1.583.054L9.735 9.332q-.697.267-.778 1.206-.08.938.188 1.689zm-7.603 2.252 4.023-2.359-2.896-7.88-3.809 7.451q-.75 1.501.322 2.44 1.073.938 2.36.348M21 24.985h5.739l1.77-19.513q.107-.75-.402-1.26c-.51-.51-.76-.51-1.261-.51h-5.9q-.858 0-1.287.51-.43.51-.376 1.26zM5.283 30.802q-2.22 0-3.752-1.584Q.001 27.633 0 25.414q0-.681.241-1.33.242-.648.536-1.277l4.896-9.48q-.805-2.18-.103-4.315.7-2.135 2.722-3.018l4.452-1.823q.858-.321 1.743-.381c.885-.06 1.14.096 1.648.41q.378-1.754 1.717-2.882A4.66 4.66 0 0 1 20.945.191h5.9q1.755 0 3.093 1.047 1.34 1.046 1.717 2.747a3.86 3.86 0 0 1 1.669-.25q.864.06 1.669.436l4.505 1.823q2.063.79 2.796 2.89.735 2.102-.15 4.12l4.87 9.75q.226.615.501 1.217.275.6.275 1.229 0 2.367-1.692 3.985-1.694 1.617-4.074 1.617-.615 0-1.164-.248a30 30 0 0 0-1.11-.475l-3.22-1.582H11.206L8.16 30.079q-.683.281-1.391.502-.71.22-1.486.22M144.381 27.412a.73.73 0 0 1-.536-.214.8.8 0 0 1-.214-.567v-2.02h-2.158v-.199q-.811 0-1.439-.321a2.43 2.43 0 0 1-.979-.888q-.352-.566-.352-1.316 0-.812.383-1.454a2.83 2.83 0 0 1 1.071-1.01q.689-.383 1.576-.383h2.648q.353 0 .566.214a.77.77 0 0 1 .215.566v6.826a.8.8 0 0 1-.23.551q-.199.215-.551.215m-5.433-.184q-.245-.214-.23-.474a.83.83 0 0 1 .184-.475l1.867-2.433h2.036l-2.618 3.26q-.26.336-.642.321c-.382-.015-.454-.076-.597-.199m2.785-3.903h1.898v-2.831h-1.898q-.612 0-1.071.398a1.23 1.23 0 0 0-.459.995q0 .642.459 1.04c.459.398.663.398 1.071.398M135.727 27.412a.8.8 0 0 1-.566-.214.8.8 0 0 1-.214-.567v-6.81q0-.352.214-.567a.8.8 0 0 1 .566-.214q.353 0 .551.214.2.215.199.566v6.811a.83.83 0 0 1-.199.566q-.198.215-.551.215m-6.29 0a.75.75 0 0 1-.551-.214.83.83 0 0 1-.199-.567v-6.81q0-.352.199-.567a.75.75 0 0 1 .551-.214q.352 0 .566.214.214.215.214.566v6.811a.8.8 0 0 1-.214.566.76.76 0 0 1-.566.215m.581-3.658v-1.378h5.373v1.378zM118.859 30.993a.77.77 0 0 1-.566-.23.75.75 0 0 1-.215-.55v-6.98q.016-1.209.567-2.173a4.03 4.03 0 0 1 1.5-1.515q.949-.566 2.142-.566 1.21 0 2.158.566a4.03 4.03 0 0 1 1.5 1.515q.567.964.567 2.173c0 1.21-.174 1.531-.521 2.174a4 4 0 0 1-1.392 1.515 3.73 3.73 0 0 1-2.005.551 3.8 3.8 0 0 1-1.669-.367 4.05 4.05 0 0 1-1.285-1.026v4.133a.75.75 0 0 1-.215.55.74.74 0 0 1-.566.23m3.428-4.897q.781 0 1.393-.368.612-.383.964-1.025.368-.658.368-1.47 0-.825-.368-1.469a2.6 2.6 0 0 0-.964-1.025 2.57 2.57 0 0 0-1.393-.383q-.765 0-1.392.383-.612.367-.965 1.025a3 3 0 0 0-.352 1.47q0 .81.352 1.469.353.642.965 1.025.627.368 1.392.368M112.661 27.473q-1.27 0-2.265-.536a4.1 4.1 0 0 1-1.546-1.5q-.551-.963-.551-2.204 0-1.254.52-2.204a3.85 3.85 0 0 1 1.469-1.5q.934-.55 2.143-.55 1.194 0 2.051.535a3.34 3.34 0 0 1 1.301 1.454q.459.918.459 2.128a.66.66 0 0 1-.199.49.71.71 0 0 1-.505.183h-6.168v-1.224h6.122l-.627.428a3.25 3.25 0 0 0-.306-1.362q-.291-.613-.827-.964c-.536-.351-.791-.352-1.301-.352q-.872 0-1.5.383a2.47 2.47 0 0 0-.933 1.056q-.322.657-.322 1.5c0 .843.128 1.06.383 1.5q.383.657 1.056 1.04c.673.383.964.383 1.546.383q.474 0 .964-.168.505-.184.811-.414a.8.8 0 0 1 .49-.168q.276-.016.474.153.261.23.276.505c.015.275-.072.342-.245.475q-.52.413-1.301.673-.765.26-1.469.26M105.505 27.427a.8.8 0 0 1-.566-.214.8.8 0 0 1-.214-.566v-4.378q0-.963-.475-1.423-.474-.474-1.24-.475-.795 0-1.316.551-.505.552-.505 1.408h-1.27q0-.994.428-1.744.429-.765 1.194-1.194.78-.429 1.775-.429.873 0 1.546.383c.673.383.796.633 1.041 1.133q.383.734.383 1.79v4.378a.8.8 0 0 1-.215.566q-.213.214-.566.214m-10.209 0a.8.8 0 0 1-.566-.214.8.8 0 0 1-.214-.566v-6.811q0-.353.214-.566a.8.8 0 0 1 .566-.215q.352 0 .567.214a.77.77 0 0 1 .214.567v6.81a.8.8 0 0 1-.214.567.77.77 0 0 1-.567.214m5.112 0a.8.8 0 0 1-.566-.214.8.8 0 0 1-.214-.566v-4.378q0-.963-.475-1.423-.475-.474-1.24-.475-.795 0-1.316.551-.52.552-.52 1.408h-.964q0-.994.398-1.744.397-.765 1.102-1.194c.705-.43 1.005-.429 1.607-.429q.872 0 1.546.383.673.383 1.04 1.133.383.734.383 1.79v4.378a.8.8 0 0 1-.214.566.77.77 0 0 1-.567.214M89.273 27.473q-1.225 0-2.19-.55a4.2 4.2 0 0 1-1.499-1.516q-.536-.964-.536-2.173 0-1.24.536-2.205a3.85 3.85 0 0 1 1.47-1.5q.933-.55 2.142-.55a3.84 3.84 0 0 1 1.653.352q.75.336 1.347 1.025.215.245.153.505-.06.26-.337.46a.6.6 0 0 1-.474.106 1 1 0 0 1-.475-.275q-.75-.796-1.867-.796-.78 0-1.377.367-.597.353-.934.995-.337.643-.337 1.515 0 .826.337 1.47.352.642.964 1.025.612.368 1.424.368.536 0 .933-.123.414-.138.75-.413a.88.88 0 0 1 .505-.214.58.58 0 0 1 .46.137q.26.214.29.49.03.26-.183.475-1.102 1.025-2.755 1.025M78.718 27.488q-1.057 0-1.898-.444a3.37 3.37 0 0 1-1.317-1.331q-.474-.873-.474-2.143v-3.765q0-.337.214-.55.23-.23.566-.23c.336 0 .409.076.551.23a.72.72 0 0 1 .23.55v3.765q0 .857.321 1.424.322.55.873.826.55.26 1.24.26.657 0 1.163-.26.52-.26.826-.704c.306-.444.306-.628.306-.995h.965q0 .95-.475 1.714-.46.766-1.27 1.21-.796.443-1.822.443m3.382-.076a.8.8 0 0 1-.566-.214.8.8 0 0 1-.215-.567v-6.826q0-.352.215-.566a.8.8 0 0 1 .566-.215q.352 0 .566.215a.77.77 0 0 1 .214.566v6.826a.8.8 0 0 1-.214.566.77.77 0 0 1-.566.215m-3.061-9.474q-.78 0-1.408-.26a2.56 2.56 0 0 1-.995-.735 1.68 1.68 0 0 1-.367-1.056q0-.321.199-.536a.64.64 0 0 1 .49-.214q.305 0 .49.214a.76.76 0 0 1 .198.536q0 .382.398.658.398.26.995.26t.995-.26q.398-.276.398-.658 0-.321.199-.536a.64.64 0 0 1 .49-.214q.305 0 .49.214a.76.76 0 0 1 .198.536q0 .582-.367 1.056a2.56 2.56 0 0 1-.995.735q-.612.26-1.408.26M68.51 27.473q-1.116 0-2.004-.55a4.1 4.1 0 0 1-1.408-1.516q-.505-.964-.505-2.173c0-1.21.183-1.531.55-2.174a4.182 4.182 0 0 1 3.673-2.082q1.195 0 2.144.567a4.04 4.04 0 0 1 1.5 1.515q.566.964.566 2.173h-.597q0 1.21-.52 2.174a4 4 0 0 1-1.393 1.515q-.888.55-2.005.551m.307-1.377q.78 0 1.393-.368a2.74 2.74 0 0 0 .964-1.025q.352-.658.352-1.47 0-.825-.352-1.469a2.6 2.6 0 0 0-.964-1.025 2.57 2.57 0 0 0-1.393-.383q-.765 0-1.393.383a2.7 2.7 0 0 0-.98 1.025q-.351.643-.351 1.47 0 .81.352 1.469.367.642.98 1.025.627.368 1.392.368m3.428 1.331a.8.8 0 0 1-.566-.214.8.8 0 0 1-.214-.566v-2.342l.29-1.622 1.27.55v3.414a.77.77 0 0 1-.229.566.75.75 0 0 1-.55.214M53.654 27.412a.8.8 0 0 1-.566-.214.8.8 0 0 1-.214-.567v-6.81q0-.352.214-.567a.8.8 0 0 1 .566-.214q.49 0 .827.474l3.168 4.576 3.168-4.576q.337-.474.827-.474.351 0 .566.214a.77.77 0 0 1 .214.566v6.811a.8.8 0 0 1-.214.566.77.77 0 0 1-.566.215.8.8 0 0 1-.567-.214.8.8 0 0 1-.214-.567v-5.57l.398.121-2.816 3.98q-.382.536-.827.536-.444-.016-.81-.536l-2.771-3.98.398-.122v5.571a.8.8 0 0 1-.214.566.77.77 0 0 1-.567.215M114.888 12.168a3.73 3.73 0 0 1-2.005-.551 4.1 4.1 0 0 1-1.408-1.516q-.505-.963-.505-2.173c0-1.21.184-1.53.551-2.173a4.184 4.184 0 0 1 3.673-2.081q1.195 0 2.143.566a4.03 4.03 0 0 1 1.5 1.515q.566.964.566 2.173h-.596q0 1.209-.521 2.174a4 4 0 0 1-1.393 1.515q-.887.55-2.005.55m.306-1.378q.781 0 1.393-.367.613-.383.964-1.025.353-.66.353-1.47 0-.825-.353-1.47a2.6 2.6 0 0 0-.964-1.025 2.57 2.57 0 0 0-1.393-.382q-.765 0-1.392.382a2.7 2.7 0 0 0-.98 1.026q-.352.642-.352 1.47 0 .81.352 1.469.368.642.98 1.025.627.367 1.392.367m3.429 1.332a.8.8 0 0 1-.566-.214.8.8 0 0 1-.215-.567V9l.291-1.623 1.27.551v3.413a.77.77 0 0 1-.229.567.75.75 0 0 1-.551.214M110.156 11.923q-.198.184-.566.184-.352-.015-.551-.215l-3.719-3.994 3.505-3.919q.198-.213.551-.244.367-.03.566.153.23.213.26.49a.57.57 0 0 1-.168.474l-2.77 2.969 2.938 3.153q.2.199.199.474 0 .26-.245.475m-6.061.199a.7.7 0 0 1-.535-.214.83.83 0 0 1-.199-.567V4.515q0-.352.199-.566a.7.7 0 0 1 .535-.214q.353 0 .567.214a.74.74 0 0 1 .229.566v2.556h1.959V8.51h-1.959v2.831a.77.77 0 0 1-.229.567.77.77 0 0 1-.567.214M96.674 12.168q-1.148 0-2.036-.536a3.9 3.9 0 0 1-1.377-1.5q-.505-.964-.505-2.204 0-1.255.535-2.204a3.9 3.9 0 0 1 1.5-1.5q.95-.55 2.189-.55 1.224 0 2.173.55a3.8 3.8 0 0 1 1.485 1.5q.55.949.551 2.204h-.903q0 1.24-.474 2.204a3.74 3.74 0 0 1-1.27 1.5q-.812.536-1.868.536m.275 3.413q-1.087 0-2.035-.429c-.948-.429-1.169-.704-1.607-1.255q-.2-.26-.153-.535a.7.7 0 0 1 .306-.444q.275-.184.566-.123.306.062.49.306.413.52 1.04.812.628.29 1.424.29.735 0 1.347-.352.627-.351.995-1.04.367-.689.367-1.684V8.954l.505-1.347.995.321v3.306q0 1.21-.536 2.189a4.05 4.05 0 0 1-1.5 1.576q-.948.582-2.204.582m.031-4.79q.795 0 1.408-.368t.949-1.01q.352-.643.352-1.485t-.352-1.484a2.5 2.5 0 0 0-.949-1.026q-.612-.367-1.408-.367c-.796 0-1 .122-1.408.367q-.613.368-.964 1.026-.352.642-.352 1.484c0 .842.117 1.056.352 1.485q.351.642.964 1.01.612.367 1.408.367M86.807 12.168q-1.24 0-2.189-.536a4.07 4.07 0 0 1-1.5-1.5q-.535-.964-.535-2.204 0-1.255.535-2.204a3.9 3.9 0 0 1 1.5-1.5q.95-.55 2.189-.55 1.224 0 2.173.55a3.8 3.8 0 0 1 1.485 1.5q.55.949.551 2.204 0 1.24-.536 2.204a3.95 3.95 0 0 1-1.484 1.5q-.949.536-2.189.536m0-1.378q.795 0 1.408-.367.612-.368.949-1.01.352-.643.352-1.485t-.352-1.484a2.5 2.5 0 0 0-.949-1.026q-.612-.367-1.408-.367c-.796 0-1 .122-1.408.367q-.613.368-.964 1.026-.352.642-.352 1.484c0 .842.117 1.056.352 1.485q.351.642.964 1.01.612.367 1.408.367M77.319 3.75q.229 0 .413.122.184.123.291.383l3.153 6.841q.138.306.03.551a.73.73 0 0 1-.367.352q-.336.153-.581.077-.245-.077-.414-.383l-2.877-6.535h.78l-2.969 6.535a.7.7 0 0 1-.413.383q-.26.076-.582-.077a.87.87 0 0 1-.413-.367q-.107-.23.046-.536l3.168-6.841q.23-.505.735-.505zM67.8 12.168q-1.239 0-2.188-.536a4.07 4.07 0 0 1-1.5-1.5q-.535-.964-.535-2.204 0-1.255.535-2.204a3.9 3.9 0 0 1 1.5-1.5q.949-.55 2.189-.55 1.224 0 2.173.55a3.8 3.8 0 0 1 1.485 1.5q.55.949.55 2.204 0 1.24-.535 2.204a3.95 3.95 0 0 1-1.484 1.5q-.95.536-2.19.536m0-1.378q.797 0 1.409-.367.612-.368.949-1.01.352-.643.352-1.485t-.352-1.484a2.5 2.5 0 0 0-.949-1.026q-.612-.367-1.408-.367c-.796 0-1 .122-1.408.367q-.613.368-.964 1.026-.352.642-.352 1.484c0 .842.117 1.056.352 1.485q.351.642.964 1.01.612.367 1.408.367M58.385 12.26a5.9 5.9 0 0 1-2.326-.46 6 6 0 0 1-1.883-1.3 6.3 6.3 0 0 1-1.255-1.96 6.5 6.5 0 0 1-.444-2.418q0-1.286.444-2.387a6.1 6.1 0 0 1 1.255-1.944Q54.986.95 56.06.474A5.7 5.7 0 0 1 58.385 0q1.18 0 2.02.306.858.306 1.714 1.01a.7.7 0 0 1 .184.2.4.4 0 0 1 .092.198q.03.092.03.23a.64.64 0 0 1-.214.49.83.83 0 0 1-.49.214.84.84 0 0 1-.566-.2 4.5 4.5 0 0 0-1.178-.75q-.597-.26-1.592-.26-.903 0-1.699.368t-1.408 1.01q-.597.644-.934 1.5a4.8 4.8 0 0 0-.336 1.806q0 .98.336 1.837.337.841.934 1.484a4.6 4.6 0 0 0 1.408 1.01q.796.352 1.699.352.78 0 1.47-.26.704-.274 1.346-.75.275-.199.536-.168a.65.65 0 0 1 .459.214q.183.184.184.52a.8.8 0 0 1-.062.307.9.9 0 0 1-.183.26 6.1 6.1 0 0 1-1.776.995 5.8 5.8 0 0 1-1.974.336z"/>
+        </symbol>
+        <symbol id="icon-instagram" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M11.999 4.62c2.404 0 2.689.012 3.634.054.88.039 1.353.186 1.67.31.418.161.72.358 1.033.67.317.317.51.616.675 1.034.123.317.27.794.31 1.67.042.95.052 1.234.052 3.635s-.01 2.689-.053 3.635c-.038.88-.186 1.353-.309 1.67a2.8 2.8 0 0 1-.671 1.033c-.317.317-.616.51-1.034.675-.316.123-.794.27-1.67.31-.949.042-1.233.052-3.634.052s-2.69-.01-3.635-.053c-.88-.039-1.354-.186-1.67-.309a2.8 2.8 0 0 1-1.034-.672 2.8 2.8 0 0 1-.675-1.033c-.123-.316-.27-.795-.31-1.67-.041-.949-.052-1.234-.052-3.635s.01-2.689.053-3.635c.039-.879.186-1.353.31-1.67.161-.418.358-.72.67-1.033.317-.317.616-.51 1.034-.675.317-.123.795-.27 1.67-.31.946-.042 1.23-.052 3.635-.052zm0-1.62c-2.443 0-2.749.011-3.709.053-.956.043-1.613.197-2.183.419a4.4 4.4 0 0 0-1.595 1.04 4.4 4.4 0 0 0-1.04 1.593c-.222.573-.377 1.226-.42 2.182C3.012 9.251 3 9.557 3 12s.01 2.749.053 3.709c.042.956.197 1.614.418 2.183a4.4 4.4 0 0 0 1.04 1.595 4.4 4.4 0 0 0 1.593 1.037c.573.222 1.227.377 2.183.419.96.042 1.265.053 3.708.053s2.75-.01 3.71-.053c.955-.042 1.613-.197 2.182-.419a4.4 4.4 0 0 0 1.592-1.037c.499-.5.809-1.001 1.037-1.592.222-.573.376-1.227.419-2.183.042-.96.053-1.265.053-3.708s-.011-2.749-.053-3.709c-.043-.956-.197-1.614-.419-2.183a4.2 4.2 0 0 0-1.03-1.6 4.4 4.4 0 0 0-1.592-1.036c-.573-.222-1.227-.377-2.183-.419C14.748 3.011 14.443 3 12 3z"/>
+            <path d="M11.999 7.377a4.624 4.624 0 0 0 0 9.245 4.623 4.623 0 0 0 0-9.245zm0 7.62a2.998 2.998 0 1 1 0-5.996 2.998 2.998 0 0 1 0 5.997M17.882 7.194a1.08 1.08 0 1 1-2.158 0 1.08 1.08 0 0 1 2.158 0"/>
+        </symbol>
+        <symbol id="icon-menu" fill="none" viewBox="0 0 24 24">
+            <path fill="currentColor" d="M3.701 18.221q-.36 0-.606-.247c-.246-.247-.245-.37-.245-.615q0-.362.245-.605a.83.83 0 0 1 .606-.242h16.596q.36 0 .61.247c.25.247.248.367.248.609q0 .37-.249.61a.84.84 0 0 1-.61.243zm0-5.37a.82.82 0 0 1-.606-.246.83.83 0 0 1-.245-.61q0-.362.245-.604a.83.83 0 0 1 .606-.243h16.596q.36 0 .61.247a.83.83 0 0 1 .248.61.839.839 0 0 1-.858.847zm0-5.363q-.36 0-.606-.247c-.246-.247-.245-.37-.245-.615q0-.362.245-.605a.83.83 0 0 1 .606-.242h16.596q.36 0 .61.246c.25.246.248.368.248.61q0 .368-.249.61a.84.84 0 0 1-.61.243z"/>
+        </symbol>
+        <symbol id="icon-close" fill="none" viewBox="0 0 24 24">
+            <path fill="currentColor" stroke="currentColor" d="M17.6 5.925c.165 0 .267.049.347.129a.45.45 0 0 1 .13.346.45.45 0 0 1-.13.346L12.693 12l.354.354 4.9 4.9c.08.08.13.182.13.346s-.05.266-.13.346-.182.13-.346.13a.45.45 0 0 1-.347-.13l-4.9-4.9-.353-.353-5.254 5.253a.45.45 0 0 1-.347.13.45.45 0 0 1-.345-.13.45.45 0 0 1-.13-.346c0-.164.05-.267.13-.347L11.308 12l-.354-.353-4.9-4.9a.45.45 0 0 1-.128-.347c0-.164.048-.266.129-.346s.181-.129.345-.129c.165 0 .267.049.347.129l4.9 4.9.354.353 5.253-5.253a.45.45 0 0 1 .347-.129z"/>
+        </symbol>
+        <symbol id="icon-arrow-upright" fill="none" viewBox="0 0 24 24">
+            <path fill="currentColor" d="m16.29 7.8-9.595 9.603a.83.83 0 0 1-.6.254.8.8 0 0 1-.594-.26.83.83 0 0 1-.26-.6q0-.339.26-.6l9.596-9.595h-8.45a.83.83 0 0 1-.611-.247.83.83 0 0 1-.246-.61q0-.362.246-.604a.84.84 0 0 1 .612-.243h10.5q.36 0 .606.246A.82.82 0 0 1 18 5.75v10.5q0 .36-.247.606a.83.83 0 0 1-.61.246.82.82 0 0 1-.61-.246.83.83 0 0 1-.243-.606z"/>
+        </symbol>
+        <symbol id="icon-arrow-right" fill="none" viewBox="0 0 24 24">
+            <path fill="currentColor" d="M16.905 12.852H4.702A.826.826 0 0 1 3.851 12a.826.826 0 0 1 .851-.852h12.203l-5.502-5.501a.83.83 0 0 1-.258-.601.81.81 0 0 1 .252-.602q.254-.258.602-.254c.348.004.432.087.604.257l6.95 6.95a.814.814 0 0 1 .26.604.8.8 0 0 1-.26.602l-6.956 6.95a.84.84 0 0 1-.604.26.8.8 0 0 1-.596-.262.82.82 0 0 1-.254-.596q0-.34.254-.596z"/>
+        </symbol>
+        <symbol id="icon-arrow-left" fill="none" viewBox="0 0 24 24">
+            <path fill="currentColor" d="m7.095 12.852 5.502 5.501q.255.255.258.6a.82.82 0 0 1-.252.602.8.8 0 0 1-.602.256.84.84 0 0 1-.604-.258l-6.95-6.95a.814.814 0 0 1-.26-.604.8.8 0 0 1 .26-.602l6.956-6.956a.85.85 0 0 1 .604-.254q.34 0 .596.254a.837.837 0 0 1 0 1.2l-5.508 5.507h12.203a.837.837 0 0 1 .857.852.837.837 0 0 1-.858.852z"/>
+        </symbol>
+        <symbol id="icon-arrow-dropdown" fill="none" viewBox="0 0 32 32">
+            <path fill="currentColor" stroke="currentColor" d="M23.116 12.177a.25.25 0 0 1 .354 0l.353.353a.25.25 0 0 1 0 .354l-7.646 7.646a.25.25 0 0 1-.354 0l-7.646-7.646a.25.25 0 0 1 0-.354l.353-.353a.25.25 0 0 1 .354 0L16 19.293z"/>
+        </symbol>
+        <symbol id="icon-facebook" fill="none" viewBox="0 0 24 24">
+            <path fill="currentColor" d="M22 12.304c0-5.557-4.477-10.061-10-10.061S2 6.747 2 12.303c0 5.023 3.657 9.185 8.438 9.94v-7.03h-2.54v-2.91h2.54v-2.216c0-2.521 1.492-3.914 3.777-3.914 1.094 0 2.238.196 2.238.196v2.476h-1.26c-1.243 0-1.63.776-1.63 1.572v1.887h2.773l-.443 2.908h-2.33v7.03c4.78-.754 8.437-4.916 8.437-9.938"/>
+        </symbol>
+        <symbol id="icon-star" fill="none" viewBox="0 0 16 16">
+            <path fill="currentColor" stroke="currentColor" d="M7.71777 0.683594C7.82114 0.438859 8.17885 0.438864 8.28223 0.683594L9.90527 4.53906C10.0947 4.98881 10.5211 5.29266 11.0059 5.33105L15.2188 5.66406C15.4981 5.68621 15.5892 6.01569 15.3945 6.18066L12.1846 8.89746C11.8125 9.21254 11.648 9.7093 11.7627 10.1846L12.7432 14.2461C12.801 14.4858 12.5305 14.7119 12.2852 14.5645L8.67773 12.3877C8.26129 12.1365 7.73871 12.1364 7.32227 12.3877L3.71484 14.5645C3.46953 14.7119 3.19896 14.4858 3.25684 14.2461L4.2373 10.1846C4.35198 9.70935 4.18759 9.21258 3.81543 8.89746L0.605469 6.18066C0.410831 6.0157 0.501933 5.68621 0.78125 5.66406L4.99414 5.33105C5.47892 5.29266 5.90534 4.98892 6.09473 4.53906L7.71777 0.683594Z" />
+        </symbol>
+        <symbol id="star-empty" viewBox="0 0 34 32">
+            <title>star-empty</title>
+            <path class="path-star-empty"
+                  d="M33.412 12.395l-11.842-1.021-4.628-10.904-4.628 10.92-11.842 1.005 8.993 7.791-2.701 11.579 10.179-6.144 10.179 6.144-2.685-11.579 8.976-7.791zM16.941 22.541l-6.193 3.739 1.647-7.049-5.468-4.744 7.214-0.626 2.8-6.638 2.816 6.654 7.214 0.626-5.468 4.744 1.647 7.049-6.209-3.755z"/>
+        </symbol>
+
+        <symbol id="star-half" viewBox="0 0 34 32">
+            <title>star-half</title>
+            <path class="path-star-half"
+                  d="M 33.412,12.395 21.57,11.374 16.942,0.47 12.314,11.39 0.472,12.395 9.465,20.186 6.764,31.765 16.943,25.621 27.122,31.765 24.437,20.186 33.413,12.395 Z M 16.941,22.541 c 0,0 -0.297971,-14.6455833 0,-15.318 l 2.816,6.654 7.214,0.626 -5.468,4.744 1.647,7.049 z"/>
+            </symbol>
+
+        <symbol id="star-filled" viewBox="0 0 34 32">
+            <title>star-filled</title>
+            <path class="path-star-filled"
+                  d="M16.941 25.621l10.179 6.144-2.701-11.579 8.993-7.791-11.842-1.005-4.628-10.92-4.628 10.92-11.842 1.005 8.993 7.791-2.701 11.579z"/>
+        </symbol>
+    </defs>
+</svg>
+
+    <header class="header" id="header">
+    <div class="container header-container">
+        <div class="header-wrap">
+        <!--logo --> 
+        <a href="./index.html" class="logo" aria-label="Солодка Майстерня">
+            <svg class="logo-img" width="158" height="72" aria-hidden="true">
+                <use href="#icon-logo"></use>
+            </svg>
+        </a>
+
+        <!---Nav-->
+        <nav class="nav">
+            <ul class="nav-list">
+                <li class="nav-item">
+                    <a href="#desserts" class="nav-link ">Солодощі</a></li>
+                <li class="nav-item">
+                    <a href="#about-us" class="nav-link">Про нас</a></li>
+                <li class="nav-item">
+                    <a href="#feedback" class="nav-link">Відгуки</a></li>
+                <li class="nav-item">
+                    <a href="#faq" class="nav-link">Часті питання</a></li>
+            </ul>
+            <a href="#desserts" class="btn header-btn">До покупок</a>
+        </nav>
+
+        <button class="mob-menu-open" type="button" data-menu-open aria-label="Відкрити меню">
+            <svg class="mob-menu-svg" width="24" height="24" aria-hidden="true">
+                <use href="#icon-menu"></use>
+            </svg>
+        </button>
+      </div> 
+    </div>
+</header>
+
+
+    <main>
+      <section class="hero" id="hero">
+  <!-- #region Hero -->
+
+  <!-- #endregion -->
+  <picture>
+    <source
+      media="(min-width: 1440px)"
+      type="image/webp"
+      srcset="/project-Code4Fun/assets/hero-bg-pc-Bx3sNJxa.webp 1x, /project-Code4Fun/assets/hero-bg-pc_2x-hIuemhgO.webp 2x"
+      width="1440"
+      height="900"
+    />
+    <source
+      media="(min-width: 768px)"
+      type="image/webp"
+      srcset="/project-Code4Fun/assets/hero-bg-tab-C4MFWAEt.webp 1x, /project-Code4Fun/assets/hero-bg-tab_2x-Uke7miSm.webp 2x"
+      width="768"
+      height="900"
+    />
+    <img
+      src="/project-Code4Fun/assets/hero-bg-mob-DzqMfZLz.webp"
+      srcset="/project-Code4Fun/assets/hero-bg-mob-DzqMfZLz.webp 1x, /project-Code4Fun/assets/hero-bg-mob2x-CR4IvGj0.webp 2x"
+      width="375"
+      height="738"
+      alt="Ягідний тарт"
+      fetchpriority="high"
+      loading="eager"
+      decoding="async"
+    />
+  </picture>
+  <div class="hero-container container">
+    <h1 class="hero-title">Ласкаво просимо до Солодкої Майстерні</h1>
+    <p class="hero-text">
+      Відкрийте для себе наші неперевершені десерти, приготовані з любов'ю та
+      увагою до деталей. Кожен шматочок — це справжнє свято смаку!
+    </p>
+    <a class="hero-btn" href="#feedback" role="button">Що про нас думають</a>
+  </div>
+</section>
+
+      <section class="popular-products section" id="popular-products">
+  <div class="container popular-products__container">
+    <h2 class="popular-products__title">Наші бестселлери</h2>
+
+    <div class="loader" data-popular-products-loader role="status">
+      <span class="loader__spinner" aria-hidden="true"></span>
+      <span class="loader__text">Завантаження популярних товарів</span>
+    </div>
+
+    <div class="popular-products__status" data-popular-products-status hidden>
+      Популярні товари поки відсутні.
+    </div>
+
+    <div class="popular-products__slider" data-popular-products-slider hidden>
+      <div class="popular-products__viewport">
+        <ul class="popular-products__list" data-popular-products-list></ul>
+      </div>
+
+      <div class="popular-products__controls">
+        <div
+          class="popular-products__pagination"
+          data-popular-products-pagination
+        ></div>
+
+        <div class="popular-products__buttons">
+          <button
+            class="popular-products__arrow"
+            type="button"
+            data-popular-products-prev
+            aria-label="Previous products"
+          >
+            <svg class="popular-products__arrow-icon" width="24" height="24">
+              <use href="#icon-arrow-left"></use>
+            </svg>
+          </button>
+          <button
+            class="popular-products__arrow"
+            type="button"
+            data-popular-products-next
+            aria-label="Next products"
+          >
+            <svg class="popular-products__arrow-icon" width="24" height="24">
+              <use href="#icon-arrow-right"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+      <section
+  class="dessert-list section"
+  id="desserts"
+  aria-labelledby="dessert-list-title"
+>
+  <div class="container">
+    <div class="dessert-list__header">
+      <div class="dessert-list__intro">
+        <h2 class="dessert-list__title" id="dessert-list-title">Солодощі</h2>
+        <p class="dessert-list__subtitle">
+          Спробуйте наші смачні десерти, які вас здивують!
+        </p>
+      </div>
+
+      <div class="dessert-list__filters">
+        <div class="dessert-list__dropdown">
+          <button
+            class="dessert-list__dropdown-button"
+            type="button"
+            aria-expanded="false"
+            aria-controls="dessert-list-dropdown"
+          >
+            <span class="dessert-list__selected-category">Всі десерти</span>
+            <svg
+              class="dessert-list__dropdown-icon"
+              width="24"
+              height="24"
+              aria-hidden="true"
+            >
+              <use href="#icon-arrow-dropdown"></use>
+            </svg>
+          </button>
+
+          <div
+            class="dessert-list__dropdown-panel"
+            id="dessert-list-dropdown"
+            hidden
+          >
+            <ul
+              class="dessert-list__dropdown-menu"
+              aria-label="Категорії десертів"
+            ></ul>
+          </div>
+        </div>
+
+        <ul
+          class="dessert-list__categories"
+          aria-label="Категорії десертів"
+        ></ul>
+      </div>
+    </div>
+
+    <ul class="dessert-list__cards" aria-live="polite"></ul>
+
+    <div class="loader" data-dessert-list-loader role="status" hidden>
+      <span class="loader__spinner" aria-hidden="true"></span>
+      <span class="loader__text">Завантаження десертів</span>
+    </div>
+
+    <button class="dessert-list__load-more" type="button" hidden>
+      Завантажити ще
+    </button>
+  </div>
+</section>
+
+      <section class="section" id="about-us">
+  <div class="container">
+    <h2 class="about-us_title">Про нас</h2>
+    <p class="about-us_text">
+      У нашій 'Солодкій Майстерні' ми створюємо неповторні солодкі шедеври, що
+      приносять радість та задоволення. Наша місія — пропонувати високоякісні
+      десерти, які поєднують у собі вишуканий смак, свіжі інгредієнти та
+      естетичний вигляд.
+    </p>
+
+    <div class="about-us_swiper">
+      <div class="about-us_gallery">
+        <div class="about-us_swipe">
+          <ul class="about-us_list">
+            <li class="about-us_item">
+              <img
+                class="about-us_image"
+                src="/project-Code4Fun/assets/1_img-Cv2_n2Bv.webp"
+                srcset="/project-Code4Fun/assets/1_img-Cv2_n2Bv.webp 1x, /project-Code4Fun/assets/1_img.@2x-BITT4ym8.webp 2x"
+                alt="Кондитер начиняє профітролі"
+                width="644"
+                height="478"
+                loading="lazy"
+              />
+            </li>
+            <li class="about-us_item">
+              <img
+                class="about-us_image"
+                src="/project-Code4Fun/assets/2_img-Cmm39CiY.webp"
+                srcset="/project-Code4Fun/assets/2_img-Cmm39CiY.webp 1x, /project-Code4Fun/assets/2_img.@2x-CQMsRM0s.webp 2x"
+                alt="Команда кондитерів за рецептом"
+                width="644"
+                height="478"
+                loading="lazy"
+              />
+            </li>
+            <li class="about-us_item">
+              <img
+                class="about-us_image"
+                src="/project-Code4Fun/assets/3_img-CpSEMt4a.webp"
+                srcset="/project-Code4Fun/assets/3_img-CpSEMt4a.webp 1x, /project-Code4Fun/assets/3_img.@2x-DXE_hx73.webp 2x"
+                alt="Вітрина кондитерської"
+                width="644"
+                height="478"
+                loading="lazy"
+              />
+            </li>
+            <li class="about-us_item">
+              <img
+                class="about-us_image"
+                src="/project-Code4Fun/assets/4_img-ja8bJMKu.webp"
+                srcset="/project-Code4Fun/assets/4_img-ja8bJMKu.webp 1x, /project-Code4Fun/assets/4_img.@2x-Btrt5yBD.webp 2x"
+                alt="Відвідувач зі шматком торта"
+                width="644"
+                height="478"
+                loading="lazy"
+              />
+            </li>
+          </ul>
+        </div>
+        <button
+          class="about-us_btn about-us_btn-prev"
+          type="button"
+          aria-label="Попередній слайд"
+        >
+          <svg class="about-us_icon" width="24" height="24" aria-hidden="true">
+            <use href="#icon-arrow-left"></use>
+          </svg>
+        </button>
+        <button
+          class="about-us_btn about-us_btn-next"
+          type="button"
+          aria-label="Наступний слайд"
+        >
+          <svg class="about-us_icon" width="24" height="24" aria-hidden="true">
+            <use href="#icon-arrow-right"></use>
+          </svg>
+        </button>
+      </div>
+      <div class="about-us_pagination-box">
+        <div class="about-us_pagination"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+      <section class="feedback section" id="feedback">
+  <div class="container feedback-container">
+    <h2 class="feedback-title">Відгуки Клієнтів</h2>
+    <p class="feedback-subtitle">
+      Найкращі десерти, які я коли-небудь куштував!
+    </p>
+
+    <div class="loader" data-feedback-loader role="status">
+      <span class="loader__spinner" aria-hidden="true"></span>
+      <span class="loader__text">Завантаження відгуків</span>
+    </div>
+
+    <div class="feedback-slider-wrapper" data-feedback-content hidden>
+
+  <div class="feedback-slider swiper">
+    <div class="feedback-list swiper-wrapper">
+      <!-- Відгуки будуть додані через JavaScript -->
+    </div>
+  </div>
+
+  <div class="feedback-controls">
+    <button
+      class="feedback-button feedback-button-prev"
+      type="button"
+      aria-label="Попередній відгук"
+    >
+      <svg class="feedback-button-icon" width="24" height="24">
+        <use href="#icon-arrow-left"></use>
+      </svg>
+    </button>
+
+    <button
+      class="feedback-button feedback-button-next"
+      type="button"
+      aria-label="Наступний відгук"
+    >
+      <svg class="feedback-button-icon" width="24" height="24">
+        <use href="#icon-arrow-right"></use>
+      </svg>
+    </button>
+  </div>
+      <div class="feedback-pagination swiper-pagination"></div>
+    </div>
+  </div>
+</section>
+
+      <section class="faq section" id="faq">
+  <div class="container">
+    <h2 class="faq-title">Часті питання</h2>
+
+    <div class="accordion-container faq-accordion">
+      <div class="ac faq-item">
+        <h3 class="ac-header faq-header">
+          <button type="button" class="ac-trigger faq-trigger">
+            <span class="faq-question">
+              1. Які способи оплати ви приймаєте?
+            </span>
+
+            <svg class="faq-icon" width="32" height="32" aria-hidden="true">
+              <use href="#icon-arrow-dropdown"></use>
+            </svg>
+          </button>
+        </h3>
+
+        <div class="ac-panel faq-panel">
+          <p class="ac-text faq-answer">
+            Ми приймаємо оплату онлайн банківськими картками Visa та Mastercard,
+            через платіжні системи Apple Pay та Google Pay, а також готівкою
+            кур'єру при отриманні замовлення.
+          </p>
+        </div>
+      </div>
+
+      <div class="ac faq-item">
+        <h3 class="ac-header faq-header">
+          <button type="button" class="ac-trigger faq-trigger">
+            <span class="faq-question">2. Чи є у вас доставка?</span>
+
+            <svg class="faq-icon" width="32" height="32" aria-hidden="true">
+              <use href="#icon-arrow-dropdown"></use>
+            </svg>
+          </button>
+        </h3>
+
+        <div class="ac-panel faq-panel">
+          <p class="ac-text faq-answer">
+            Так, ми здійснюємо доставку по всьому місту. Вартість та умови
+            доставки залежать від вашого району, деталі можна уточнити при
+            оформленні замовлення.
+          </p>
+        </div>
+      </div>
+
+      <div class="ac faq-item">
+        <h3 class="ac-header faq-header">
+          <button type="button" class="ac-trigger faq-trigger">
+            <span class="faq-question">
+              3. Як швидко здійснюється доставка?
+            </span>
+
+            <svg class="faq-icon" width="32" height="32" aria-hidden="true">
+              <use href="#icon-arrow-dropdown"></use>
+            </svg>
+          </button>
+        </h3>
+
+        <div class="ac-panel faq-panel">
+          <p class="ac-text faq-answer">
+            Зазвичай доставка займає від 60 до 90 хвилин з моменту підтвердження
+            замовлення. У пікові години час доставки може бути збільшений, про
+            що ми вас обов'язково повідомимо.
+          </p>
+        </div>
+      </div>
+
+      <div class="ac faq-item">
+        <h3 class="ac-header faq-header">
+          <button type="button" class="ac-trigger faq-trigger">
+            <span class="faq-question">
+              4. Чи можна забрати замовлення самостійно?
+            </span>
+
+            <svg class="faq-icon" width="32" height="32" aria-hidden="true">
+              <use href="#icon-arrow-dropdown"></use>
+            </svg>
+          </button>
+        </h3>
+
+        <div class="ac-panel faq-panel">
+          <p class="ac-text faq-answer">
+            Так, ви можете забрати своє замовлення самостійно за адресою
+            [Вказати адресу самовивозу] у робочі години магазину.
+          </p>
+        </div>
+      </div>
+
+      <div class="ac faq-item">
+        <h3 class="ac-header faq-header">
+          <button type="button" class="ac-trigger faq-trigger">
+            <span class="faq-question">
+              5. Чи пропонуєте ви десерти для людей з особливими дієтичними
+              потребами (безглютенові, безлактозні, веганські)?
+            </span>
+
+            <svg class="faq-icon" width="32" height="32" aria-hidden="true">
+              <use href="#icon-arrow-dropdown"></use>
+            </svg>
+          </button>
+        </h3>
+
+        <div class="ac-panel faq-panel">
+          <p class="ac-text faq-answer">
+            Ми постійно розширюємо наш асортимент. Наразі у нас є обмежений
+            вибір безглютенових та безлактозних десертів. Будь ласка,
+            перегляньте наш каталог або зв'яжіться з нами для отримання
+            детальної інформації.
+          </p>
+        </div>
+      </div>
+
+      <div class="ac faq-item">
+        <h3 class="ac-header faq-header">
+          <button type="button" class="ac-trigger faq-trigger">
+            <span class="faq-question">
+              6. Як я можу зробити замовлення на індивідуальний торт?
+            </span>
+
+            <svg class="faq-icon" width="32" height="32" aria-hidden="true">
+              <use href="#icon-arrow-dropdown"></use>
+            </svg>
+          </button>
+        </h3>
+
+        <div class="ac-panel faq-panel">
+          <p class="ac-text faq-answer">
+            Для замовлення індивідуального торта, будь ласка, зв'яжіться з нашим
+            менеджером за телефоном [Вказати номер телефону] або залиште заявку
+            на сайті. Ми обговоримо всі деталі дизайну, начинки та терміни
+            виконання.
+          </p>
+        </div>
+      </div>
+
+      <div class="ac faq-item">
+        <h3 class="ac-header faq-header">
+          <button type="button" class="ac-trigger faq-trigger">
+            <span class="faq-question">
+              7. Чи можна змінити або скасувати замовлення після його
+              оформлення?
+            </span>
+
+            <svg class="faq-icon" width="32" height="32" aria-hidden="true">
+              <use href="#icon-arrow-dropdown"></use>
+            </svg>
+          </button>
+        </h3>
+
+        <div class="ac-panel faq-panel">
+          <p class="ac-text faq-answer">
+            Якщо вам потрібно змінити або скасувати замовлення, будь ласка,
+            негайно зв'яжіться з нами за телефоном. Можливість внесення змін
+            залежить від етапу, на якому знаходиться ваше замовлення.
+          </p>
+        </div>
+      </div>
+
+      <div class="ac faq-item">
+        <h3 class="ac-header faq-header">
+          <button type="button" class="ac-trigger faq-trigger">
+            <span class="faq-question">
+              8. Який термін зберігання ваших десертів?
+            </span>
+
+            <svg class="faq-icon" width="32" height="32" aria-hidden="true">
+              <use href="#icon-arrow-dropdown"></use>
+            </svg>
+          </button>
+        </h3>
+
+        <div class="ac-panel faq-panel">
+          <p class="ac-text faq-answer">
+            Термін зберігання десертів залежить від їхнього типу та
+            інгредієнтів. Зазвичай десерти рекомендується вживати протягом
+            24-72 годин. Точна інформація про термін зберігання вказана на
+            упаковці кожного виробу.
+          </p>
+        </div>
+      </div>
+
+      <div class="ac faq-item">
+        <h3 class="ac-header faq-header">
+          <button type="button" class="ac-trigger faq-trigger">
+            <span class="faq-question">
+              9. Чи є у вас програма лояльності або знижки для постійних
+              клієнтів?
+            </span>
+
+            <svg class="faq-icon" width="32" height="32" aria-hidden="true">
+              <use href="#icon-arrow-dropdown"></use>
+            </svg>
+          </button>
+        </h3>
+
+        <div class="ac-panel faq-panel">
+          <p class="ac-text faq-answer">
+            Так, ми цінуємо наших постійних клієнтів! Деталі нашої програми
+            лояльності та діючих акцій ви можете знайти на окремій сторінці
+            нашого сайту або уточнити у менеджера.
+          </p>
+        </div>
+      </div>
+
+      <div class="ac faq-item">
+        <h3 class="ac-header faq-header">
+          <button type="button" class="ac-trigger faq-trigger">
+            <span class="faq-question">
+              10. Що робити, якщо у мене є скарга або пропозиція?
+            </span>
+
+            <svg class="faq-icon" width="32" height="32" aria-hidden="true">
+              <use href="#icon-arrow-dropdown"></use>
+            </svg>
+          </button>
+        </h3>
+
+        <div class="ac-panel faq-panel">
+          <p class="ac-text faq-answer">
+            Ми завжди раді зворотному зв'язку! Якщо у вас виникли питання,
+            скарги або пропозиції, будь ласка, напишіть нам на електронну пошту
+            [Вказати email] або зателефонуйте. Ваша думка допомагає нам ставати
+            кращими.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    </main>
+
+    <footer class="footer">
+  <div class="container footer-container">
+    <div class="footer-top">
+      <a class="footer-logo" href="./index.html" aria-label="Солодка Майстерня">
+        <svg class="footer-logo-icon" width="309" height="132">
+          <use href="#icon-logo"></use>
+        </svg>
+      </a>
+
+      <nav class="footer-nav" aria-label="Навігація">
+        <ul class="footer-nav-list">
+          <li>
+            <a class="footer-nav-link" href="#desserts">Солодощі</a>
+          </li>
+          <li>
+            <a class="footer-nav-link" href="#about-us">Про нас</a>
+          </li>
+          <li>
+            <a class="footer-nav-link" href="#feedback">Відгуки</a>
+          </li>
+          <li>
+            <a class="footer-nav-link" href="#faq">Часті питання</a>
+          </li>
+        </ul>
+      </nav>
+
+      <ul class="footer-socials">
+        <li>
+          <a
+            class="footer-social-link"
+            href="https://www.facebook.com/"
+            aria-label="Facebook"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <svg class="footer-social-icon" width="44" height="44">
+              <use href="#icon-facebook"></use>
+            </svg>
+          </a>
+        </li>
+
+        <li>
+          <a
+            class="footer-social-link"
+            href="https://www.instagram.com/"
+            aria-label="Instagram"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <svg class="footer-social-icon" width="44" height="44">
+              <use href="#icon-instagram"></use>
+            </svg>
+          </a>
+        </li>
+
+        <li>
+          <a
+            class="footer-social-link"
+            href="https://www.youtube.com/"
+            aria-label="YouTube"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <svg class="footer-social-icon" width="44" height="44">
+              <use href="#icon-youtube"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="footer-bottom">
+      <p class="footer-copyright">
+        &#169; 2025 Солодка Майстерня. Усі права захищені.
+      </p>
+    </div>
+  </div>
+</footer>
+
+
+    <div class="product-modal-overlay is-closed" aria-hidden="true">
+  <div
+    class="product-modal"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="product-modal-title"
+  >
+    <button
+      class="product-modal-close"
+      type="button"
+      aria-label="Закрити модальне вікно"
+    >
+      <svg class="close-svg" width="24" height="24">
+        <use class="product-modal-close-use"></use>
+      </svg>
+    </button>
+
+    <div class="product-modal-left-content">
+      <div class="product-modal-img-div">
+        <img
+          class="product-modal-img"
+          src="/project-Code4Fun/assets/product-model-cake-CbduBfti.webp"
+          alt="Класичний десерт з шоколадним центром"
+        />
+      </div>
+    </div>
+    <div class="product-modal-right-content">
+      <ul class="product-modal-info-list">
+        <li class="product-modal-info-list-element">
+          <h2
+            class="product-modal-info-list-element-title"
+            id="product-modal-title"
+          >
+            Шоколадний фондан
+          </h2>
+        </li>
+        <li class="product-modal-info-list-element">
+          <p class="product-modal-info-list-element-price">120 грн</p>
+        </li>
+        <li class="product-modal-info-list-element">
+          <div class="product-modal-info-list-element-grade"></div>
+        </li>
+        <li class="product-modal-info-list-element">
+          <p class="product-modal-info-list-element-description">
+            Класичний десерт з шоколадним центром
+          </p>
+        </li>
+        <li class="product-modal-info-list-element">
+          <p class="product-modal-info-list-element-composition">
+            <span class="product-modal-list-accent">Склад:</span>
+            <span class="product-modal-info-list-element-composition-span"
+              >вода, мука, сіль, цукор, шоколад</span
+            >
+          </p>
+        </li>
+        <li class="product-modal-info-list-element">
+          <button class="product-modal-info-list-element-btn" type="button">
+            Перейти до замовлення
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+    <div class="order-modal-backdrop is-hidden" aria-hidden="true">
+  <div
+    class="order-modal-box"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="order-modal-title"
+  >
+    <button
+      class="order-modal-close"
+      type="button"
+      aria-label="Закрити модальне вікно"
+    >
+      <svg width="24" height="24">
+        <use href="#icon-close"></use>
+      </svg>
+    </button>
+
+    <h2 class="order-modal-title" id="order-modal-title">
+      Оформлення замовлення
+    </h2>
+
+    <form class="order-modal-form">
+      <input class="order-modal-dessert-id" type="hidden" name="dessertId" />
+      <input
+        class="order-modal-dessert-name"
+        type="hidden"
+        name="dessertName"
+      />
+
+      <div class="order-modal-field">
+        <label class="order-modal-label" for="modal-user-name">Ім'я*</label>
+        <input
+          class="order-modal-input"
+          type="text"
+          id="modal-user-name"
+          name="name"
+          placeholder="Вікторія"
+          minlength="2"
+          maxlength="48"
+          required
+        />
+      </div>
+
+      <div class="order-modal-field">
+        <label class="order-modal-label" for="modal-user-phone">Телефон*</label>
+        <input
+          class="order-modal-input"
+          type="tel"
+          id="modal-user-phone"
+          name="phone"
+          pattern="^\+?380[0-9]{9}$"
+          placeholder="38 0__ _______"
+          required
+        />
+      </div>
+
+      <div class="order-modal-field">
+        <label class="order-modal-label" for="modal-user-comment"
+          >Коментар*</label
+        >
+        <textarea
+          class="order-modal-textarea"
+          id="modal-user-comment"
+          name="comment"
+          placeholder="Ваш коментар"
+          minlength="2"
+          maxlength="256"
+          required
+        ></textarea>
+      </div>
+
+      <button class="order-modal-submit" type="submit">Надіслати заявку</button>
+    </form>
+  </div>
+</div>
+
+    <div class="mob-menu" data-menu>
+    <div class="mob-wrap">
+        <div class="mob-head">
+            <a href="./index.html" class="mob-logo" aria-label="Солодка Майстерня">
+    <svg
+        class="mob-logo-img"
+        width="158"
+        height="72"
+        aria-hidden="true"
+    >
+        <use href="#icon-logo"></use>
+    </svg>
+</a>
+    
+<button type="button" class="mob-close-button" data-menu-close aria-label="Закрити меню">
+    <svg class="modal-close-icon" width="24" height="24" aria-hidden="true">
+        <use href="#icon-close"></use>
+    </svg>
+</button>
+        </div>
+        <div class="mob-content">
+ <nav class="nav-menu">
+            <ul class="mob-list">
+                <li><a href="#desserts" class="mob-link">Солодощі</a></li>
+                <li><a href="#about-us" class="mob-link">Про нас</a></li>
+                <li><a href="#feedback" class="mob-link">Відгуки</a></li>
+                <li><a href="#faq" class="mob-link">Часті питання</a></li>
+            </ul>
+            <a href="#desserts" class="btn header-btn-mob">До покупок</a>
+        </nav>
+   </div>
+   </div>
+
+</div>
+
+    <button type="button" class="scroll-top_btn" aria-label="Повернутися вгору">
+  <svg class="scroll-top_icon" width="24" height="24" aria-hidden="true">
+    <use href="#icon-arrow-left"></use>
+  </svg>
+</button>
+
+    <div
+  class="loader loader--overlay"
+  data-overlay-loader
+  role="status"
+  hidden
+>
+  <span class="loader__spinner" aria-hidden="true"></span>
+  <span class="loader__text">Завантаження</span>
+</div>
+
+
+  </body>
+</html>
